@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace AFForUnity.Kits.DevlpKit.Supplements.Collections
+namespace Kits.DevlpKit.Supplements.Collections
 {
     public class StringSpliter : IEnumerator<char>
     {

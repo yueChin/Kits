@@ -4,7 +4,7 @@ using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.Playables;
 
-namespace AFForUnity.Kits.ClientKit.Utilities.TimelineE.AnalyseTrack
+namespace Kits.ClientKit.Utilities.TimelineE.AnalyseTrack
 {
     /// <summary>
     /// <para>混合器从<see cref="PlayableBehaviour"/>继承</para>

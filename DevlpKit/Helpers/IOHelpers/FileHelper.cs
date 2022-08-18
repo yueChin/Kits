@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
-namespace AFForUnity.Kits.DevlpKit.Helpers.IOHelpers
+namespace Kits.DevlpKit.Helpers.IOHelpers
 {
     public static partial class FileHelper
     {

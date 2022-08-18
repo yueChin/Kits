@@ -7,7 +7,7 @@
 using System;
 using UnityEngine;
 
-namespace AFForUnity.Kits.DevlpKit.Helpers.SecurityHelpers.ObfuscateInt
+namespace Kits.DevlpKit.Helpers.SecurityHelpers.ObfuscateInt
 {
 	[Serializable]
 	public struct ObfuscateLong : IFormattable, IEquatable<ObfuscateLong>, IComparable<ObfuscateLong>, IComparable<long>, IComparable

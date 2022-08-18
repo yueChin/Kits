@@ -1,5 +1,5 @@
 
-namespace AFForUnity.Kits.DevlpKit.Helpers.CurveHelpers
+namespace Kits.DevlpKit.Helpers.CurveHelpers
 {
     public static class InterpolationHelper
     {

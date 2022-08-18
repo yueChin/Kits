@@ -3,7 +3,7 @@ using System.IO;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace AFForUnity.Kits.DevlpKit.Helpers.SecurityHelpers
+namespace Kits.DevlpKit.Helpers.SecurityHelpers
 {
     public static class SHA1Helper
     {

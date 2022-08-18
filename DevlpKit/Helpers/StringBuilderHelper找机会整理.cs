@@ -4,10 +4,10 @@ using System.Collections.Generic;
 using System.Security.Cryptography;
 using System.Text;
 using System.Text.RegularExpressions;
-using AFForUnity.Kits.DevlpKit.Helpers.StringHelpers;
+using Kits.DevlpKit.Helpers.StringHelpers;
 using UnityEngine;
 
-namespace AFForUnity.Kits.DevlpKit.Helpers
+namespace Kits.DevlpKit.Helpers
 {
     public enum StringFormat
     {

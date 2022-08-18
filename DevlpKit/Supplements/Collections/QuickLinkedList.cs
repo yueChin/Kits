@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace AFForUnity.Kits.DevlpKit.Supplements.Collections
+namespace Kits.DevlpKit.Supplements.Collections
 {
     /// <summary>
     /// 快速链表，与 LinkedList 相比，本实现使用连续的 struct node 提高性能

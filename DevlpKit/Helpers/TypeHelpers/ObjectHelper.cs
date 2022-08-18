@@ -3,7 +3,7 @@ using System.IO;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 
-namespace AFForUnity.Kits.DevlpKit.Helpers.TypeHelpers
+namespace Kits.DevlpKit.Helpers.TypeHelpers
 {
 	public static class ObjectHelper
 	{

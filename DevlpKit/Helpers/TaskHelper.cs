@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Runtime.ExceptionServices;
 using System.Threading.Tasks;
 
-namespace AFForUnity.Kits.DevlpKit.Helpers
+namespace Kits.DevlpKit.Helpers
 {
     /// <summary>
     /// A class containing <see cref="Task"/> extension methods.

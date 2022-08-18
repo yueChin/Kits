@@ -1,7 +1,7 @@
 ﻿
 using System;
 
-namespace AFForUnity.Kits.DevlpKit.Helpers.SecurityHelpers.BitMask32
+namespace Kits.DevlpKit.Helpers.SecurityHelpers.BitMask32
 {
     public struct BitMask64
     {

@@ -1,7 +1,7 @@
 using System;
 using System.Text;
 
-namespace AFForUnity.Kits.DevlpKit.Helpers.StringHelpers
+namespace Kits.DevlpKit.Helpers.StringHelpers
 {
     public static partial class StrOperateHelper
     {

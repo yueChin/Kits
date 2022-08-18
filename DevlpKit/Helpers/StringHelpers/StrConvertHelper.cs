@@ -4,7 +4,7 @@ using System.Globalization;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace AFForUnity.Kits.DevlpKit.Helpers.StringHelpers
+namespace Kits.DevlpKit.Helpers.StringHelpers
 {
 	public static partial class StrConvertHelper
 	{

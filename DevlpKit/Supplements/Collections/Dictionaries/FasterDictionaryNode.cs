@@ -1,4 +1,4 @@
-namespace AFForUnity.Kits.DevlpKit.Supplements.Collections.Dictionaries
+namespace Kits.DevlpKit.Supplements.Collections.Dictionaries
 {
     public struct FasterDictionaryNode<TKey>
     {

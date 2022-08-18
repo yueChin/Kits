@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.TerrainTools;
 
-namespace AFForUnity.Kits.ClientKit.Handlers
+namespace Kits.ClientKit.Handlers
 {
     
     public static class TerrainHandler

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace AFForUnity.Kits.ClientKit.Handlers.Transform
+namespace Kits.ClientKit.Handlers.Transform
 {
     public static class RectTransformHandler
     {

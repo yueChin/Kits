@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Playables;
 using UnityEngine.Timeline;
 
-namespace AFForUnity.Kits.ClientKit.Utilities.TimelineE.AnalyseTrack
+namespace Kits.ClientKit.Utilities.TimelineE.AnalyseTrack
 {
     /// <summary>
     /// 可播放资产官方通常以<see cref="PlayableAsset"/>后缀

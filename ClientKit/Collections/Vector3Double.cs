@@ -1,8 +1,8 @@
 ﻿using System;
-using AFForUnity.Kits.DevlpKit.Helpers;
+using Kits.DevlpKit.Helpers;
 using UnityEngine;
 
-namespace AFForUnity.Kits.ClientKit.Collections
+namespace Kits.ClientKit.Collections
 {
     [System.Serializable]
     public struct Vector3Double

@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-namespace AFForUnity.Kits.ClientKit.Collections
+namespace Kits.ClientKit.Collections
 {
     /// <summary>
     /// A region quadtree implementation used for fast lookup in a two dimensional world.

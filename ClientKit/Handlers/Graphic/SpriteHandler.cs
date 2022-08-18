@@ -1,10 +1,10 @@
 ﻿using System;
 using System.IO;
 using System.Reflection;
-using AFForUnity.Kits.ClientKit.Handlers.ValueType;
+using Kits.ClientKit.Handlers.ValueType;
 using UnityEngine;
 
-namespace AFForUnity.Kits.ClientKit.Handlers.Graphic
+namespace Kits.ClientKit.Handlers.Graphic
 {
     public static class SpriteHandler
     {

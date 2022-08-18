@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Random = AFForUnity.Kits.DevlpKit.Supplements.Structs.Random;
+using Random = Kits.DevlpKit.Supplements.Structs.Random;
 
-namespace AFForUnity.Kits.DevlpKit.Helpers.ValueTypeHelpers
+namespace Kits.DevlpKit.Helpers.ValueTypeHelpers
 {
 	public static class EnumHelper
 	{

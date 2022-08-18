@@ -1,4 +1,4 @@
-namespace AFForUnity.Kits.DevlpKit.Helpers.SecurityHelpers.CRC32
+namespace Kits.DevlpKit.Helpers.SecurityHelpers.CRC32
 {
     /// <summary>
     /// 校验相关的实用函数。

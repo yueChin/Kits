@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Reflection;
-using AFForUnity.Kits.DevlpKit.Helpers.TypeHelpers;
+using Kits.DevlpKit.Helpers.TypeHelpers;
 using UnityEngine.Playables;
 
-namespace AFForUnity.Kits.ClientKit.Handlers.LoopSystems
+namespace Kits.ClientKit.Handlers.LoopSystems
 {
     public static class PlayableHandler
     {

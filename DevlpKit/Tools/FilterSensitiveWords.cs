@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 
-namespace AFForUnity.Kits.DevlpKit.Tools
+namespace Kits.DevlpKit.Tools
 {
     /// <summary>
     /// 此算法思想来源于“http://www.cnblogs.com/sumtec/archive/2008/02/01/1061742.html”,经测试，检测"屄defg东正教dsa SofU  ckd臺灣青年獨立聯盟daoiuq 样什么J&    b玩意 日你先人"这个字符串并替换掉敏感词平均花费2.7ms

@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.IO;
 using System.Security.Cryptography;
 using System.Text;
-using AFForUnity.Kits.DevlpKit.Helpers.ValueTypeHelpers;
+using Kits.DevlpKit.Helpers.ValueTypeHelpers;
 using UnityEngine;
 
-namespace AFForUnity.Kits.DevlpKit.Helpers.SecurityHelpers
+namespace Kits.DevlpKit.Helpers.SecurityHelpers
 {
     public static class MD5Helper
     {

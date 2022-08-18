@@ -1,7 +1,7 @@
 using System;
-using AFForUnity.Kits.DevlpKit.Helpers.TypeHelpers;
+using Kits.DevlpKit.Helpers.TypeHelpers;
 
-namespace AFForUnity.Kits.DevlpKit.Supplements.Collections
+namespace Kits.DevlpKit.Supplements.Collections
 {
     public class TypeCache<T>
     {

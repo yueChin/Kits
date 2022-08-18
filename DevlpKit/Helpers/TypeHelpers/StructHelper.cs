@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace AFForUnity.Kits.DevlpKit.Helpers.TypeHelpers
+namespace Kits.DevlpKit.Helpers.TypeHelpers
 {
 	public static class StructHelper
 	{

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace AFForUnity.Kits.DevlpKit.Tools.Algorithm
+namespace Kits.DevlpKit.Tools.Algorithm
 {
     /// <summary>
     /// 算法类

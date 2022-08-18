@@ -4,7 +4,7 @@ using System.Diagnostics;
 #endif
 using System;
 
-namespace AFForUnity.Kits.DevlpKit.Tools
+namespace Kits.DevlpKit.Tools
 {
 	/// <summary>
 	/// Design By Contract Checks.

@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using AFForUnity.Kits.ClientKit.Handlers.Audio.Codec;
-using AFForUnity.Kits.DevlpKit.Helpers.CompressHelpers;
+using Kits.ClientKit.Handlers.Audio.Codec;
+using Kits.DevlpKit.Helpers.CompressHelpers;
 using UnityEngine;
 
-namespace AFForUnity.Kits.ClientKit.Handlers.Audio
+namespace Kits.ClientKit.Handlers.Audio
 {
     public static class AudioClipHandler
     {

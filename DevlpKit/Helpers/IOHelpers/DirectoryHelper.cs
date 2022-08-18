@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 
-namespace AFForUnity.Kits.DevlpKit.Helpers.IOHelpers
+namespace Kits.DevlpKit.Helpers.IOHelpers
 {
     public static class DirectoryHelper
     {

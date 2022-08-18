@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-namespace AFForUnity.Kits.DevlpKit.Supplements.Collections
+namespace Kits.DevlpKit.Supplements.Collections
 {
     public class TransformEnumerator : IEnumerator
     {

@@ -2,7 +2,7 @@
 using System.Reflection;
 using UnityEngine;
 
-namespace AFForUnity.Kits.ClientKit.Handlers.Objects
+namespace Kits.ClientKit.Handlers.Objects
 {
     public static partial class GameObjectHandler
     {

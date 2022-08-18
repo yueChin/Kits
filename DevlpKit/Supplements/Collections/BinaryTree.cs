@@ -1,5 +1,5 @@
 
-namespace AFForUnity.Kits.DevlpKit.Supplements.Collections
+namespace Kits.DevlpKit.Supplements.Collections
 {
     public class BinaryTreeNode
     {

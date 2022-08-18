@@ -1,10 +1,10 @@
 using System;
 using System.Collections;
-using AFForUnity.Kits.ClientKit.Collections.Math;
-using AFForUnity.Kits.DevlpKit.Helpers.CurveHelpers;
+using Kits.ClientKit.Collections.Math;
+using Kits.DevlpKit.Helpers.CurveHelpers;
 using UnityEngine;
 
-namespace AFForUnity.Kits.ClientKit.Handlers.Curve
+namespace Kits.ClientKit.Handlers.Curve
 {
 	public enum InterpolationType
 	{

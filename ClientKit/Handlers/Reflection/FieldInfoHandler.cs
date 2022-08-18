@@ -2,7 +2,7 @@
 using System.Reflection;
 using UnityEngine;
 
-namespace AFForUnity.Kits.ClientKit.Handlers.Reflection
+namespace Kits.ClientKit.Handlers.Reflection
 {
     public static class FieldInfoHandler
     {

@@ -2,7 +2,7 @@
 using System.IO;
 using UnityEngine;
 
-namespace AFForUnity.Kits.ClientKit.Handlers.Graphic
+namespace Kits.ClientKit.Handlers.Graphic
 {
     public static class TextureHandler
     {

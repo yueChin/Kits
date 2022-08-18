@@ -1,4 +1,4 @@
-namespace AFForUnity.Kits.DevlpKit.Supplements.Structs
+namespace Kits.DevlpKit.Supplements.Structs
 {
     public struct FasterListEnumerator<T>
     {

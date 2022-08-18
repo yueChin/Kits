@@ -1,10 +1,11 @@
 ﻿using System;
-using AFForUnity.Kits.DevlpKit.Helpers;
-using AFForUnity.Kits.DevlpKit.Supplements.Structs;
+using Kits.DevlpKit.Helpers;
+using Kits.DevlpKit.Supplements.Structs;
 using UnityEngine;
-using Random = AFForUnity.Kits.DevlpKit.Supplements.Structs.Random;
+using Random = Kits.DevlpKit.Supplements.Structs.Random;
+using Range = Kits.DevlpKit.Supplements.Structs.Range;
 
-namespace AFForUnity.Kits.ClientKit.Handlers
+namespace Kits.ClientKit.Handlers
 {
     /// <summary>
     /// Random 扩展
@@ -63,7 +64,7 @@ namespace AFForUnity.Kits.ClientKit.Handlers
         }
 
 
-        public static float InsideRange(this ref Random random, DevlpKit.Supplements.Structs.Range range)
+        public static float InsideRange(this ref Random random, Range range)
         {
             return random.Range(range.min, range.max);
         }

@@ -1,7 +1,7 @@
 using System;
 using System.Runtime.CompilerServices;
 
-namespace AFForUnity.Kits.DevlpKit.Supplements.Structs
+namespace Kits.DevlpKit.Supplements.Structs
 {
     /// <summary>
     /// MB stands for ManagedBuffer

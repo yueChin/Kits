@@ -1,6 +1,6 @@
-﻿using AFForUnity.Kits.DevlpKit.Helpers;
+﻿using Kits.DevlpKit.Helpers;
 
-namespace AFForUnity.Kits.ClientKit.Handlers.Graphic
+namespace Kits.ClientKit.Handlers.Graphic
 {
 
     public static class GraphicMathHandler

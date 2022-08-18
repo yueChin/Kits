@@ -1,9 +1,9 @@
 using System;
 using System.Runtime.CompilerServices;
-using AFForUnity.Kits.DevlpKit.Supplements.Collections;
-using AFForUnity.Kits.DevlpKit.Tools;
+using Kits.DevlpKit.Supplements.Collections;
+using Kits.DevlpKit.Tools;
 
-namespace AFForUnity.Kits.DevlpKit.Supplements.Structs
+namespace Kits.DevlpKit.Supplements.Structs
 {
     public class ThreadSafeFasterList<T> 
     {

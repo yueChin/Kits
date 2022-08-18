@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Net;
 
-namespace AFForUnity.Kits.DevlpKit.Helpers
+namespace Kits.DevlpKit.Helpers
 {
 	public static class NetHelper
 	{

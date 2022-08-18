@@ -1,5 +1,5 @@
 ﻿
-namespace AFForUnity.Kits.ClientKit.Handlers.Serialize
+namespace Kits.ClientKit.Handlers.Serialize
 {
     public class JSONSerializeHandler
     {

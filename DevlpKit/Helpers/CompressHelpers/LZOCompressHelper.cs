@@ -1,7 +1,7 @@
 using System;
 using System.Runtime.InteropServices;
 
-namespace AFForUnity.Kits.DevlpKit.Helpers.CompressHelpers
+namespace Kits.DevlpKit.Helpers.CompressHelpers
 {
     /// <summary>
     /// Wrapper class for the highly performant LZO compression library

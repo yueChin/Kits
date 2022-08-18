@@ -11,7 +11,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using UnityEngine;
 
-namespace AFForUnity.Kits.ClientKit.Utilities
+namespace Kits.ClientKit.Utilities
 {
     public struct WordNodeKeyValue   //????
     {

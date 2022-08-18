@@ -12,7 +12,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace AFForUnity.Kits.DevlpKit.Supplements.Collections.Trie
+namespace Kits.DevlpKit.Supplements.Collections.Trie
 {
     /// <summary>
     /// The Trie Map Data Structure (a.k.a Prefix Tree).

@@ -1,4 +1,4 @@
-using AFForUnity.Kits.DevlpKit.Supplements;
+using Kits.DevlpKit.Supplements;
 using UnityEngine;
 
 namespace AFForUnity.Kits.ClientKit.Extensions.Collections.Supplemenets

@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace AFForUnity.Kits.ClientKit.Handlers.ValueType
+namespace Kits.ClientKit.Handlers.ValueType
 {
     /// <summary>
     /// Extension for the standard Vector3 that allows us to add functions

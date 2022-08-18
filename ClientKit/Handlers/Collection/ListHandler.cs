@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace AFForUnity.Kits.ClientKit.Handlers.Collection
+namespace Kits.ClientKit.Handlers.Collection
 {
     public static partial class ListHandler
     {

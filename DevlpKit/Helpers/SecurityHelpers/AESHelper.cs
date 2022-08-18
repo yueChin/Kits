@@ -4,7 +4,7 @@ using System.Security.Cryptography;
 using System.Text;
 using UnityEngine;
 
-namespace AFForUnity.Kits.DevlpKit.Helpers.SecurityHelpers
+namespace Kits.DevlpKit.Helpers.SecurityHelpers
 {
     public static class AesHelper
     {

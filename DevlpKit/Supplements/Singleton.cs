@@ -1,5 +1,5 @@
 
-namespace AFForUnity.Kits.DevlpKit.Supplements
+namespace Kits.DevlpKit.Supplements
 {
     public class Singleton<T> where T : new()
     {

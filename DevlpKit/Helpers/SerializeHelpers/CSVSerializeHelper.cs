@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Reflection;
 using UnityEngine;
 
-namespace AFForUnity.Kits.DevlpKit.Helpers.SerializeHelpers
+namespace Kits.DevlpKit.Helpers.SerializeHelpers
 {
     public class CSVSerializeHelper
     {

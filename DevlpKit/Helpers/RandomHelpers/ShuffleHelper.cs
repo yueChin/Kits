@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace AFForUnity.Kits.DevlpKit.Helpers.RandomHelpers
+namespace Kits.DevlpKit.Helpers.RandomHelpers
 {
     public static class ShuffleUtility
     {

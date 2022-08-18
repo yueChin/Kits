@@ -1,5 +1,5 @@
 ﻿
-namespace AFForUnity.Kits.ClientKit.Handlers.Audio.Codec
+namespace Kits.ClientKit.Handlers.Audio.Codec
 {
     public enum BandMode
     {

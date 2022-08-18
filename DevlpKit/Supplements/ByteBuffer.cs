@@ -4,7 +4,7 @@ using System.Diagnostics;
 using System.Numerics;
 using System.Text;
 
-namespace AFForUnity.Kits.DevlpKit.Supplements
+namespace Kits.DevlpKit.Supplements
 {
 	/// <summary>
 	/// 字节缓冲区

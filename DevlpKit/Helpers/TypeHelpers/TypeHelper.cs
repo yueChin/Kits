@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Reflection;
 
-namespace AFForUnity.Kits.DevlpKit.Helpers.TypeHelpers
+namespace Kits.DevlpKit.Helpers.TypeHelpers
 {
 
     public static partial class TypeHelper

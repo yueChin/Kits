@@ -1,5 +1,5 @@
 ﻿
-namespace AFForUnity.Kits.DevlpKit.Helpers.StringHelpers
+namespace Kits.DevlpKit.Helpers.StringHelpers
 {
     public static class CharHelper
     {

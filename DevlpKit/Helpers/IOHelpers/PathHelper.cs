@@ -1,7 +1,7 @@
 using System;
 using System.IO;
 
-namespace AFForUnity.Kits.DevlpKit.Helpers.IOHelpers
+namespace Kits.DevlpKit.Helpers.IOHelpers
 {
 
     /// <summary>路径相关的实用函数。</summary>

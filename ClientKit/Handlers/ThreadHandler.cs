@@ -3,7 +3,7 @@ using System.Runtime.CompilerServices;
 using System.Threading;
 using UnityEngine;
 
-namespace AFForUnity.Kits.ClientKit.Handlers
+namespace Kits.ClientKit.Handlers
 {
     /// <summary>
     /// Utilities for managing threading contexts.

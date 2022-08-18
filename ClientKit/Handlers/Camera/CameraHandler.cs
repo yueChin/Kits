@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace AFForUnity.Kits.ClientKit.Handlers.Camera
+namespace Kits.ClientKit.Handlers.Camera
 {
     public static class CameraHandler
     {

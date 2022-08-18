@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using AFForUnity.Kits.DevlpKit.Helpers.StringHelpers;
+using Kits.DevlpKit.Helpers.StringHelpers;
 using UnityEngine;
 
-namespace AFForUnity.Kits.ClientKit.Handlers
+namespace Kits.ClientKit.Handlers
 {
 	public static class StringHandler
 	{

@@ -1,4 +1,4 @@
-﻿namespace AFForUnity.Kits.DevlpKit.Helpers.TypeHelpers
+﻿namespace Kits.DevlpKit.Helpers.TypeHelpers
 {
 	public static class ClassHelper
 	{

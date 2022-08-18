@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace AFForUnity.Kits.ClientKit.Handlers.Curve
+namespace Kits.ClientKit.Handlers.Curve
 {
     public enum EaseType
     {

@@ -1,7 +1,7 @@
 ﻿using System.Runtime.InteropServices;
 using System.Text;
 
-namespace AFForUnity.Kits.DevlpKit.Supplements.Closure
+namespace Kits.DevlpKit.Supplements.Closure
 {
 
     internal interface ITupleStruct

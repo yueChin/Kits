@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-namespace AFForUnity.Kits.ClientKit.Handlers.Graphic
+namespace Kits.ClientKit.Handlers.Graphic
 {
 
     public static class LayerMaskHandler

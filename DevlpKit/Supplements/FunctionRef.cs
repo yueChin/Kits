@@ -1,5 +1,5 @@
 ﻿
-namespace AFForUnity.Kits.DevlpKit.Supplements 
+namespace Kits.DevlpKit.Supplements 
 {
 
     //public delegate TResult Func<in T1,in T2,in T3,in T4,in T5,out TResult>( T1 obj1, T2 obj2, T3 obj3, T4 obj4, T5 obj5 );

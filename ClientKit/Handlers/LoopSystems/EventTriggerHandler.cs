@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
-namespace AFForUnity.Kits.ClientKit.Handlers.LoopSystems
+namespace Kits.ClientKit.Handlers.LoopSystems
 {
     public static class EventTriggerHandler
     {

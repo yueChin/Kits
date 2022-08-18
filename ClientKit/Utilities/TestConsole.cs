@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace AFForUnity.Kits.ClientKit.Utilities
+namespace Kits.ClientKit.Utilities
 {
     /// <summary>
     /// A console to display Unity's debug logs in-game.

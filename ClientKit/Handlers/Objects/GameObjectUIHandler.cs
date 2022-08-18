@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-namespace AFForUnity.Kits.ClientKit.Handlers.Objects
+namespace Kits.ClientKit.Handlers.Objects
 {
     public static partial class GameObjectHandler
     {

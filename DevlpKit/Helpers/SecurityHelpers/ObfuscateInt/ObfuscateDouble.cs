@@ -7,7 +7,7 @@
 using System;
 using UnityEngine;
 
-namespace AFForUnity.Kits.DevlpKit.Helpers.SecurityHelpers.ObfuscateInt
+namespace Kits.DevlpKit.Helpers.SecurityHelpers.ObfuscateInt
 {
 	[Serializable]
 	public struct ObfuscateDouble : IFormattable, IEquatable<ObfuscateDouble>, IComparable<ObfuscateDouble>, IComparable<double>, IComparable

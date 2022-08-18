@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace AFForUnity.Kits.DevlpKit.Supplements.Collections.DoubleLinkedList
+namespace Kits.DevlpKit.Supplements.Collections.DoubleLinkedList
 {
     /// <summary>
     /// 描述：两向链表

@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace AFForUnity.Kits.DevlpKit.Helpers
+namespace Kits.DevlpKit.Helpers
 {
     public interface IPool : System.IDisposable
     {

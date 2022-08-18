@@ -1,7 +1,7 @@
 ﻿using System;
-using AFForUnity.Kits.DevlpKit.Helpers;
+using Kits.DevlpKit.Helpers;
 
-namespace AFForUnity.Kits.DevlpKit.Supplements.Structs
+namespace Kits.DevlpKit.Supplements.Structs
 {
 
     /// <summary>

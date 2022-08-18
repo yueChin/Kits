@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text;
 
-namespace AFForUnity.Kits.DevlpKit.Helpers.ValueTypeHelpers
+namespace Kits.DevlpKit.Helpers.ValueTypeHelpers
 {
 	public static class ByteHelper
 	{

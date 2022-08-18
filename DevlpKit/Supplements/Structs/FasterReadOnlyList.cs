@@ -1,7 +1,7 @@
 using System.Runtime.CompilerServices;
-using AFForUnity.Kits.DevlpKit.Supplements.Collections;
+using Kits.DevlpKit.Supplements.Collections;
 
-namespace AFForUnity.Kits.DevlpKit.Supplements.Structs
+namespace Kits.DevlpKit.Supplements.Structs
 {
     public readonly struct FasterReadOnlyList<T> 
     {

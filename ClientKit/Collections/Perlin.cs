@@ -1,7 +1,7 @@
 ﻿
 using UnityEngine;
 
-namespace AFForUnity.Kits.ClientKit.Collections
+namespace Kits.ClientKit.Collections
 {
 
     public static class Perlin

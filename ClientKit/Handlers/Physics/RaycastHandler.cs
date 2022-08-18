@@ -4,7 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace AFForUnity.Kits.ClientKit.Handlers.Physics
+namespace Kits.ClientKit.Handlers.Physics
 {
     /// <summary>
     /// Provides functions for specialized raycast solutions

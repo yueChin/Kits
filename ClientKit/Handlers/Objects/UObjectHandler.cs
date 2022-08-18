@@ -2,7 +2,7 @@
 using UnityEditor;
 using UnityEngine;
 
-namespace AFForUnity.Kits.ClientKit.Handlers.Objects
+namespace Kits.ClientKit.Handlers.Objects
 {
     public static class UObjectHandler
     {

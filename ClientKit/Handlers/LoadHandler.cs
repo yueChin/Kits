@@ -2,7 +2,7 @@
 using System.Linq;
 using UnityEditor;
 
-namespace AFForUnity.Kits.ClientKit.Handlers
+namespace Kits.ClientKit.Handlers
 {
     public static class LoadHandler
     {

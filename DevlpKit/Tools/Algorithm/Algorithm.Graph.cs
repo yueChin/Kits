@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace AFForUnity.Kits.DevlpKit.Tools.Algorithm
+namespace Kits.DevlpKit.Tools.Algorithm
 {
     public static partial class Algorithm
     {

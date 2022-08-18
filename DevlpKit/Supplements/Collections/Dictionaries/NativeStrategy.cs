@@ -1,10 +1,10 @@
 using System;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
-using AFForUnity.Kits.DevlpKit.Supplements.Structs;
-using AFForUnity.Kits.DevlpKit.Tools;
+using Kits.DevlpKit.Supplements.Structs;
+using Kits.DevlpKit.Tools;
 
-namespace AFForUnity.Kits.DevlpKit.Supplements.Collections.Dictionaries
+namespace Kits.DevlpKit.Supplements.Collections.Dictionaries
 {
     public struct NativeStrategy<T> : IBufferStrategy<T> where T : struct
     {

@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace AFForUnity.Kits.ClientKit.Utilities
+namespace Kits.ClientKit.Utilities
 {
     /// <summary>
     /// 事件计数器

@@ -1,5 +1,5 @@
 ﻿
-namespace AFForUnity.Kits.DevlpKit.Supplements.Structs
+namespace Kits.DevlpKit.Supplements.Structs
 {
     /// <summary>
     /// 键值对

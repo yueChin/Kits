@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
-using AFForUnity.Kits.DevlpKit.Helpers;
-using AFForUnity.Kits.DevlpKit.Tools;
+using Kits.DevlpKit.Helpers;
+using Kits.DevlpKit.Tools;
 
-namespace AFForUnity.Kits.DevlpKit.Supplements.Collections.Dictionaries
+namespace Kits.DevlpKit.Supplements.Collections.Dictionaries
 {
     /// <summary>
     /// This dictionary has been created for just one reason: I needed a dictionary that would have let me iterate

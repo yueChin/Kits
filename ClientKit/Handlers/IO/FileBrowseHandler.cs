@@ -1,5 +1,5 @@
 
-namespace AFForUnity.Kits.ClientKit.Handlers.IO
+namespace Kits.ClientKit.Handlers.IO
 {
 	public static class FileBrowseHandler
 	{

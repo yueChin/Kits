@@ -6,7 +6,7 @@ using System;
 using System.Reflection;
 using System.Runtime.CompilerServices;
 
-namespace AFForUnity.Kits.DevlpKit.Tools
+namespace Kits.DevlpKit.Tools
 {
 #if !UNITY_COLLECTIONS
     public enum Allocator

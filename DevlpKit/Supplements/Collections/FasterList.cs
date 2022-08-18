@@ -1,11 +1,11 @@
 using System;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
-using AFForUnity.Kits.DevlpKit.Supplements.Structs;
-using AFForUnity.Kits.DevlpKit.Tools;
-using Console = AFForUnity.Kits.DevlpKit.Tools.Log.Console;
+using Kits.DevlpKit.Supplements.Structs;
+using Kits.DevlpKit.Tools;
+using Console = Kits.DevlpKit.Tools.ConsoleLog.Console;
 
-namespace AFForUnity.Kits.DevlpKit.Supplements.Collections
+namespace Kits.DevlpKit.Supplements.Collections
 {
     public class FasterList<T>
     {

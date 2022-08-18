@@ -2,7 +2,7 @@
 using System.Collections;
 using UnityEngine;
 
-namespace AFForUnity.Kits.ClientKit.Handlers.LoopSystems
+namespace Kits.ClientKit.Handlers.LoopSystems
 {
     public static class CoroutineHandler
     {

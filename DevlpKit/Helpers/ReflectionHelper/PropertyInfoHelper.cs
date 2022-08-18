@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Reflection;
 
-namespace AFForUnity.Kits.DevlpKit.Helpers.ReflectionHelper
+namespace Kits.DevlpKit.Helpers.ReflectionHelper
 {
 	public static class PropertyInfoHelper
 	{

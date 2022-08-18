@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using AFForUnity.EditorForUnity.Extension.Debugger;
 
-namespace AFForUnity.Kits.DevlpKit.Supplements.Structs
+namespace Kits.DevlpKit.Supplements.Structs
 {
 
     // Memory friendly multi-cast-delegate implementation
@@ -108,7 +107,7 @@ namespace AFForUnity.Kits.DevlpKit.Supplements.Structs
                             }
                             catch (Exception e)
                             {
-                                Debuger.LogException(e);
+                                throw new SystemException("", e);
                             }
                         }
                     }
@@ -232,7 +231,7 @@ namespace AFForUnity.Kits.DevlpKit.Supplements.Structs
                             }
                             catch (Exception e)
                             {
-                                Debuger.LogException(e);
+                                throw new SystemException("", e);
                             }
 
                         }
@@ -357,7 +356,7 @@ namespace AFForUnity.Kits.DevlpKit.Supplements.Structs
                             }
                             catch (Exception e)
                             {
-                                Debuger.LogException(e);
+                                throw new SystemException("", e);
                             }
                         }
                     }
@@ -481,7 +480,7 @@ namespace AFForUnity.Kits.DevlpKit.Supplements.Structs
                             }
                             catch (Exception e)
                             {
-                                Debuger.LogException(e);
+                                throw new SystemException("", e);
                             }
                         }
                     }
@@ -605,8 +604,7 @@ namespace AFForUnity.Kits.DevlpKit.Supplements.Structs
                             }
                             catch (Exception e)
                             {
-                                throw e;
-                                Debuger.LogException(e);
+                                throw new SystemException("", e);
                             }
                         }
                     }

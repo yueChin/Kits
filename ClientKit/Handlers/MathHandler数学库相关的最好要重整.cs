@@ -1,7 +1,7 @@
-using AFForUnity.Kits.DevlpKit.Helpers;
+using Kits.DevlpKit.Helpers;
 using UnityEngine;
 
-namespace AFForUnity.Kits.ClientKit.Handlers
+namespace Kits.ClientKit.Handlers
 {
 	public static class MathHandler
 	{

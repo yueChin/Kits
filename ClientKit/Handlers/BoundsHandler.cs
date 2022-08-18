@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace AFForUnity.Kits.ClientKit.Handlers
+namespace Kits.ClientKit.Handlers
 {
 
     public static class BoundsHandler

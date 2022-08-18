@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace AFForUnity.Kits.DevlpKit.Supplements.Structs
+namespace Kits.DevlpKit.Supplements.Structs
 {
     /// <summary>
     /// 二维范围

@@ -1,7 +1,7 @@
 ﻿using System.Threading;
 using UnityEngine;
 
-namespace  AFForUnity.Kits.ClientKit.Collections.Graphics
+namespace Kits.ClientKit.Collections.Graphics
 {
     /// <summary>
     /// A class to scale textures - works on ARGB32, RGB24 and Alpha8 textures that are marked readable

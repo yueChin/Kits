@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace AFForUnity.Kits.ClientKit.Handlers.ValueType
+namespace Kits.ClientKit.Handlers.ValueType
 {
     public static class Vector2Handler
     {

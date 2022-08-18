@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace AFForUnity.Kits.DevlpKit.Tools
+namespace Kits.DevlpKit.Tools
 {
     public class FilterSensitiveWordss
     {

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace AFForUnity.Kits.DevlpKit.Supplements.Collections.Trie
+namespace Kits.DevlpKit.Supplements.Collections.Trie
 {
     public class TrieMapNode<TRecord> : IComparable<TrieMapNode<TRecord>>
     {

@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Random = AFForUnity.Kits.DevlpKit.Supplements.Structs.Random;
+using Random = Kits.DevlpKit.Supplements.Structs.Random;
 
-namespace AFForUnity.Kits.DevlpKit.Helpers.RandomHelpers
+namespace Kits.DevlpKit.Helpers.RandomHelpers
 {
 	public static class RandomHelper
 	{

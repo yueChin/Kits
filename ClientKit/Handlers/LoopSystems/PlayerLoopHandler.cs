@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine.LowLevel;
 
-namespace AFForUnity.Kits.ClientKit.Handlers.LoopSystems
+namespace Kits.ClientKit.Handlers.LoopSystems
 {
     /// <summary>
     /// A class that contains extension methods used to modify the player loop.

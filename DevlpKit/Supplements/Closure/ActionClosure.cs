@@ -2,7 +2,7 @@
 
 using System;
 
-namespace AFForUnity.Kits.DevlpKit.Supplements.Closure
+namespace Kits.DevlpKit.Supplements.Closure
 {
     public struct ActionClosure
     {

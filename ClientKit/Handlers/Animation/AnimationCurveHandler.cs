@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace AFForUnity.Kits.ClientKit.Handlers.Animation
+namespace Kits.ClientKit.Handlers.Animation
 {
     /// <summary>
     /// Unity 内置类型扩展

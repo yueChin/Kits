@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace AFForUnity.Kits.ClientKit.Utilities
+namespace Kits.ClientKit.Utilities
 {
     /// <summary>
     /// 画线 

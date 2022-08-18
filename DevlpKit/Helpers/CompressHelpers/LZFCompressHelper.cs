@@ -38,7 +38,7 @@
 
 using System;
 
-namespace AFForUnity.Kits.DevlpKit.Helpers.CompressHelpers 
+namespace Kits.DevlpKit.Helpers.CompressHelpers 
 {
     /// <summary>
     /// Summary description for CLZF.

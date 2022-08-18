@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Security.Cryptography;
 
-namespace AFForUnity.Kits.DevlpKit.Helpers.SecurityHelpers
+namespace Kits.DevlpKit.Helpers.SecurityHelpers
 {
     public static class HashHelper
     {

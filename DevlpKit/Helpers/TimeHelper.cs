@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace AFForUnity.Kits.DevlpKit.Helpers
+namespace Kits.DevlpKit.Helpers
 {
 	public static class TimeHelper
 	{

@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace AFForUnity.Kits.ClientKit.Handlers.Curve
+namespace Kits.ClientKit.Handlers.Curve
 {
     public static class BezierHandler
     {

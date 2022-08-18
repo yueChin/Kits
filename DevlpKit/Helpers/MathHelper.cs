@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace AFForUnity.Kits.DevlpKit.Helpers
+namespace Kits.DevlpKit.Helpers
 {
     /// <summary>
     /// 数学工具箱

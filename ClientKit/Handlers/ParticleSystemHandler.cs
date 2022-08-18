@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
-using AFForUnity.Kits.ClientKit.Handlers.Graphic;
+using Kits.ClientKit.Handlers.Graphic;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
-namespace AFForUnity.Kits.ClientKit.Handlers
+namespace Kits.ClientKit.Handlers
 {
     public static class ParticleSystemHandler
     {

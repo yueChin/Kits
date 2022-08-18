@@ -1,5 +1,5 @@
 ﻿
-namespace AFForUnity.Kits.DevlpKit.Supplements.Collections.DoubleLinkedList
+namespace Kits.DevlpKit.Supplements.Collections.DoubleLinkedList
 {
     /// <summary>
     /// 描述：

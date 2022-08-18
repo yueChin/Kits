@@ -1,5 +1,5 @@
 ﻿
-namespace AFForUnity.Kits.DevlpKit.Helpers
+namespace Kits.DevlpKit.Helpers
 {
     /// <summary>
     /// 位操作工具箱

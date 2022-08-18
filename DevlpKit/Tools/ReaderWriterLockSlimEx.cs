@@ -1,6 +1,6 @@
 using System.Threading;
 
-namespace AFForUnity.Kits.DevlpKit.Tools
+namespace Kits.DevlpKit.Tools
 {
 #if !UNITY_WEBGL    
     public struct ReaderWriterLockSlimEx

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace AFForUnity.Kits.ClientKit.Collections.Math
+namespace Kits.ClientKit.Collections.Math
 {
 	[System.Serializable]
 	public struct IntRange

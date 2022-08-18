@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace AFForUnity.Kits.DevlpKit.Helpers.CollectionHelpers
+namespace Kits.DevlpKit.Helpers.CollectionHelpers
 {
     public static class HashSetHelper
     {

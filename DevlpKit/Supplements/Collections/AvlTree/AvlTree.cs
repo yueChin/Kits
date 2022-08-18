@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace AFForUnity.Kits.DevlpKit.Supplements.Collections.AvlTree
+namespace Kits.DevlpKit.Supplements.Collections.AvlTree
 {
     /// <summary>
     /// 平衡二叉树，默认通过 Hash 值作为比较 id，也可通过一个 IdentifierDelegate 的委托类型实现比较值的覆盖方法

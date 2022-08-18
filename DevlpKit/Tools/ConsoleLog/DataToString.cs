@@ -1,7 +1,7 @@
 using System.Collections.Generic;
-using AFForUnity.Kits.DevlpKit.Helpers.StringHelpers;
+using Kits.DevlpKit.Helpers.StringHelpers;
 
-namespace AFForUnity.Kits.DevlpKit.Tools.Log
+namespace Kits.DevlpKit.Tools.ConsoleLog
 {
     public static class DataToString
     {

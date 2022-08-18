@@ -6,14 +6,15 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Text;
 using System.Threading;
-using AFForUnity.Kits.DevlpKit.Helpers.StringHelpers;
-using AFForUnity.Kits.DevlpKit.Supplements.Collections;
+using Kits.DevlpKit.Helpers.StringHelpers;
+using Kits.DevlpKit.Supplements.Collections;
+
 #if NETFX_CORE
 using Windows.System.Diagnostics;
 #else
 #endif
 
-namespace AFForUnity.Kits.DevlpKit.Tools.Log
+namespace Kits.DevlpKit.Tools.ConsoleLog
 {
     public static class Console
     {

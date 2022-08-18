@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace AFForUnity.Kits.ClientKit.Collections
+namespace Kits.ClientKit.Collections
 {
     /// <summary>
     /// Simple and fast random number generator which can reset to a specific iteration

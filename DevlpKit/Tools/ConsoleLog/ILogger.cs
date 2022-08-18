@@ -1,6 +1,6 @@
 using System;
 
-namespace AFForUnity.Kits.DevlpKit.Tools.Log
+namespace Kits.DevlpKit.Tools.ConsoleLog
 {
     public enum LogType
     {

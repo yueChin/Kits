@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Reflection;
 
-namespace AFForUnity.Kits.DevlpKit.Helpers.ReflectionHelper
+namespace Kits.DevlpKit.Helpers.ReflectionHelper
 {
     public class AttributesHelper
     {

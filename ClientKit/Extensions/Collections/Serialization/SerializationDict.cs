@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace AFForUnity.Kits.ClientKit.Extensions.Collections.Serialization
+namespace Kits.ClientKit.Extensions.Collections.Serialization
 {
     //[Serializable]
     //public class SerializationSpriteDict : SerializationDict<string, Sprite> { }

@@ -1,7 +1,7 @@
 using System;
-using AFForUnity.Kits.DevlpKit.Tools;
+using Kits.DevlpKit.Tools;
 
-namespace AFForUnity.Kits.DevlpKit.Supplements.Collections.Dictionaries
+namespace Kits.DevlpKit.Supplements.Collections.Dictionaries
 {
     /// <summary>
     ///   original code: http://devplanet.com/blogs/brianr/archive/2008/09/29/thread-safe-dictionary-update.aspx

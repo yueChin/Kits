@@ -1,7 +1,7 @@
 using System;
 using System.Runtime.Serialization;
 
-namespace AFForUnity.Kits.DevlpKit.Tools
+namespace Kits.DevlpKit.Tools
 {
     [Serializable]
     public class Exceptions : Exception

@@ -1,7 +1,7 @@
 
 using System;
 
-namespace AFForUnity.Kits.DevlpKit.Helpers.CollectionHelpers
+namespace Kits.DevlpKit.Helpers.CollectionHelpers
 {
     public static class ArrayHelper
     {

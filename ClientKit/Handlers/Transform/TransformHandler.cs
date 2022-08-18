@@ -1,9 +1,9 @@
 using System;
 using System.Text;
-using AFForUnity.Kits.DevlpKit.Helpers;
+using Kits.DevlpKit.Helpers;
 using UnityEngine;
 
-namespace AFForUnity.Kits.ClientKit.Handlers.Transform
+namespace Kits.ClientKit.Handlers.Transform
 {
     public static class TransformHandler
     {

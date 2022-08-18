@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace AFForUnity.Kits.ClientKit.Collections.Graphics
+namespace Kits.ClientKit.Collections.Graphics
 {
 	public struct HSLColor
 	{

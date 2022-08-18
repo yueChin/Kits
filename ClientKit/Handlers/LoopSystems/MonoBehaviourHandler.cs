@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace AFForUnity.Kits.ClientKit.Handlers.LoopSystems
+namespace Kits.ClientKit.Handlers.LoopSystems
 {
     /// <summary>
     /// A class containing <see cref="MonoBehaviour"/> extension methods.

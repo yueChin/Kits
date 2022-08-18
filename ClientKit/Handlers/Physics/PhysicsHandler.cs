@@ -24,7 +24,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace AFForUnity.Kits.ClientKit.Handlers.Physics
+namespace Kits.ClientKit.Handlers.Physics
 {
     public static class PhysicsHandler
     {

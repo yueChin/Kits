@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.Playables;
 using UnityEngine.Timeline;
 
-namespace AFForUnity.Kits.ClientKit.Utilities.TimelineE.AnalyseTrack
+namespace Kits.ClientKit.Utilities.TimelineE.AnalyseTrack
 {
     /// <summary>
     /// <para>对timeline 和 playable 系统进行分析，主要是在各个函数打log</para>

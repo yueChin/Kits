@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace AFForUnity.Kits.ClientKit.Handlers
+namespace Kits.ClientKit.Handlers
 {
     /// <summary>
     /// Unity 内置类型扩展

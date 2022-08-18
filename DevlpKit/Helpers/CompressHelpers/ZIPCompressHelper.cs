@@ -3,7 +3,7 @@
 using System.IO;
 using System.IO.Compression;
 
-namespace AFForUnity.Kits.DevlpKit.Helpers.CompressHelpers
+namespace Kits.DevlpKit.Helpers.CompressHelpers
 {
     /// <summary>
     /// 压缩功能

@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace AFForUnity.Kits.ClientKit.Collections
+namespace Kits.ClientKit.Collections
 {
     /// <summary>
     /// Bounds class using double precision. Will be used to just store the min max values first, but might be extended to offer similar

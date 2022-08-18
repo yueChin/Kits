@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace AFForUnity.Kits.ClientKit.Handlers._3D
+namespace Kits.ClientKit.Handlers._3D
 {
     public class DirectotHandler
     {

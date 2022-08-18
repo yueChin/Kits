@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace AFForUnity.Kits.DevlpKit.Helpers.CollectionHelpers
+namespace Kits.DevlpKit.Helpers.CollectionHelpers
 {
 
 

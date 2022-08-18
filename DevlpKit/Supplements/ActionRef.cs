@@ -1,5 +1,5 @@
 ﻿
-namespace AFForUnity.Kits.DevlpKit.Supplements 
+namespace Kits.DevlpKit.Supplements 
 {
     //public delegate void Action<T1, T2, T3, T4, T5>( T1 obj1, T2 obj2, T3 obj3, T4 obj4, T5 obj5 );
     //public delegate void Action<T1, T2, T3, T4, T5, T6>( T1 obj1, T2 obj2, T3 obj3, T4 obj4, T5 obj5, T6 obj6 );

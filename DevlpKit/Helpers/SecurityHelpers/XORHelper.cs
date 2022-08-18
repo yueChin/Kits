@@ -1,7 +1,7 @@
 
 using System;
 
-namespace AFForUnity.Kits.DevlpKit.Helpers.SecurityHelpers
+namespace Kits.DevlpKit.Helpers.SecurityHelpers
 {
     /// <summary>
     /// 加密解密相关的实用函数。

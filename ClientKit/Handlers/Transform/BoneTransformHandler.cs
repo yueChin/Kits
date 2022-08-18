@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace AFForUnity.Kits.ClientKit.Handlers.Transform
+namespace Kits.ClientKit.Handlers.Transform
 {
     public static class BoneTransformHandler
     {

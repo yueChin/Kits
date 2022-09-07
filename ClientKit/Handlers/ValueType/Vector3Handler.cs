@@ -73,16 +73,44 @@ namespace Kits.ClientKit.Handlers.ValueType
             return new Vector2(v.x, v.y);
         }
 
-
+        public static Vector2 XZ(this Vector3 v)
+        {
+            return new Vector2(v.x, v.z);
+        }
+        
+        public static Vector2 YX(this Vector3 v)
+        {
+            return new Vector2(v.y, v.x);
+        }
+        
         public static Vector2 YZ(this Vector3 v)
         {
             return new Vector2(v.y, v.z);
         }
 
-
-        public static Vector2 XZ(this Vector3 v)
+        public static Vector2 ZX(this Vector3 v)
         {
-            return new Vector2(v.x, v.z);
+            return new Vector2(v.z, v.x);
+        }
+        
+        public static Vector2 ZY(this Vector3 v)
+        {
+            return new Vector2(v.z, v.y);
+        }
+        
+        public static bool Approximately(this Vector3 v3,Vector3 v3a,float delta = 0)
+        {
+            if (delta == 0)
+            {
+                return Mathf.Approximately(v3.x, v3a.x) && Mathf.Approximately(v3.y, v3a.y) && Mathf.Approximately(v3.z, v3a.z);
+            }
+            else
+            {
+                float x = Mathf.Abs(v3.x - v3a.x);
+                float y = Mathf.Abs(v3.y - v3a.y);
+                float z = Mathf.Abs(v3.x - v3a.z);
+                return x < delta && y < delta && z < delta;
+            }
         }
     }
 }

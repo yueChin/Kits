@@ -19,42 +19,106 @@ namespace Kits.ClientKit.Handlers.ValueType
 
         public static Vector4 X2Zero(this Vector4 v4)
         {
-            return new Vector4(0, v4.y, v4.y, v4.w);
+            return v4.ChangeX(0);
         }
 
         public static Vector4 Y2Zero(this Vector4 v4)
         {
-            return new Vector4(v4.x, 0, v4.y, v4.w);
+            return v4.ChangeY(0);
         }
 
         public static Vector4 Z2Zero(this Vector4 v4)
         {
-            return new Vector4(v4.x, v4.y, 0, v4.w);
+            return v4.ChangeZ(0);
         }
 
         public static Vector4 W2Zero(this Vector4 v4)
         {
-            return new Vector4(v4.x, v4.y, v4.z, 0);
+            return v4.ChangeW(0);
         }
         
-        public static Vector4 ChangeX(this Vector4 v4, float x)
+        public static Vector4 ChangeX(this Vector4 v4, float x,VectorOperator vOp = VectorOperator.Equal)
         {
-            return new Vector4(x, v4.y, v4.z, v4.w);
+            switch (vOp)
+            {
+                case VectorOperator.Equal:
+                    return new Vector4(x, v4.y, v4.z, v4.w);
+                case VectorOperator.Add:
+                    return new Vector4(v4.x + x, v4.y, v4.z, v4.w);
+                case VectorOperator.Sub:
+                    return new Vector4(v4.x - x, v4.y, v4.z, v4.w);
+                case VectorOperator.Multi:
+                    return new Vector4(v4.x * x, v4.y, v4.z, v4.w);
+                case VectorOperator.Divide:
+                    return new Vector4(v4.x / x, v4.y, v4.z, v4.w);
+                case VectorOperator.Mud:
+                    return new Vector4(v4.x % x, v4.y, v4.z, v4.w);
+                default:
+                    return new Vector4(x, v4.y, v4.z, v4.w);
+            }
         }
 
-        public static Vector4 ChangeY(this Vector4 v4, float y)
+        public static Vector4 ChangeY(this Vector4 v4, float y,VectorOperator vOp = VectorOperator.Equal)
         {
-            return new Vector4(v4.x, y, v4.z, v4.w);
+            switch (vOp)
+            {
+                case VectorOperator.Equal:
+                    return new Vector4(v4.x, y, v4.z, v4.w);
+                case VectorOperator.Add:
+                    return new Vector4(v4.x, v4.y + y, v4.z, v4.w);
+                case VectorOperator.Sub:
+                    return new Vector4(v4.x, v4.y - y, v4.z, v4.w);
+                case VectorOperator.Multi:
+                    return new Vector4(v4.x, v4.y * y, v4.z, v4.w);
+                case VectorOperator.Divide:
+                    return new Vector4(v4.x, v4.y / y, v4.z, v4.w);
+                case VectorOperator.Mud:
+                    return new Vector4(v4.x, v4.y % y, v4.z, v4.w);
+                default:
+                    return new Vector4(v4.x, y, v4.z, v4.w);
+            }
         }
 
-        public static Vector4 ChangeZ(this Vector4 v4, float z)
+        public static Vector4 ChangeZ(this Vector4 v4, float z,VectorOperator vOp = VectorOperator.Equal)
         {
-            return new Vector4(v4.x, v4.y, z, v4.w);
+            switch (vOp)
+            {
+                case VectorOperator.Equal:
+                    return new Vector4(v4.x, v4.y, z, v4.w);
+                case VectorOperator.Add:
+                    return new Vector4(v4.x, v4.y, v4.z + z, v4.w);
+                case VectorOperator.Sub:
+                    return new Vector4(v4.x, v4.y, v4.z - z, v4.w);
+                case VectorOperator.Multi:
+                    return new Vector4(v4.x, v4.y, v4.z * z, v4.w);
+                case VectorOperator.Divide:
+                    return new Vector4(v4.x, v4.y, v4.z / z, v4.w);
+                case VectorOperator.Mud:
+                    return new Vector4(v4.x, v4.y, v4.z % z, v4.w);
+                default:
+                    return new Vector4(v4.x, v4.y, z, v4.w);
+            }
         }
 
-        public static Vector4 ChangeW(this Vector4 v4, float w)
+        public static Vector4 ChangeW(this Vector4 v4, float w,VectorOperator vOp = VectorOperator.Equal)
         {
-            return new Vector4(v4.x, v4.y, v4.z, w);
+            switch (vOp)
+            {
+                case VectorOperator.Equal:
+                    return new Vector4(v4.x, v4.y, v4.z, w);
+                case VectorOperator.Add:
+                    return new Vector4(v4.x, v4.y,v4.z,v4.z + w);
+                case VectorOperator.Sub:
+                    return new Vector4(v4.x, v4.y,v4.z, v4.z - w);
+                case VectorOperator.Multi:
+                    return new Vector4(v4.x, v4.y,v4.z, v4.z * w);
+                case VectorOperator.Divide:
+                    return new Vector4(v4.x, v4.y, v4.z,v4.z / w);
+                case VectorOperator.Mud:
+                    return new Vector4(v4.x, v4.y,v4.z, v4.z % w);
+                default:
+                    return new Vector4(v4.x, v4.y, v4.z, w);
+            }
         }
         
         public static Vector4 Divide(this Vector4 v4, Vector4 v4d)

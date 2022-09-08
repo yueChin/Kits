@@ -2,6 +2,16 @@ using UnityEngine;
 
 namespace Kits.ClientKit.Handlers.ValueType
 {
+    public enum VectorOperator
+    {
+        Equal,
+        Add,
+        Sub,
+        Multi,
+        Divide,
+        Mud,
+    }
+    
     public static class Vector3Handler
     {
 
@@ -20,33 +30,82 @@ namespace Kits.ClientKit.Handlers.ValueType
 
         public static Vector3 X2Zero(this Vector3 v3)
         {
-            return new Vector3(0, v3.y, v3.y);
+            return v3.ChangeX(0);
         }
 
         public static Vector3 Y2Zero(this Vector3 v3)
         {
-            return new Vector3(v3.x, 0, v3.y);
+            return v3.ChangeY(0);
         }
 
         public static Vector3 Z2Zero(this Vector3 v3)
         {
-            return new Vector3(v3.x, v3.y, 0);
+            return v3.ChangeZ(0);
         }
 
-        public static Vector3 ChangeX(this Vector3 v3, float x)
+        public static Vector3 ChangeX(this Vector3 v3, float x,VectorOperator vOp = VectorOperator.Equal)
         {
-            return new Vector3(x, v3.y, v3.z);
+            switch (vOp)
+            {
+                case VectorOperator.Equal:
+                    return new Vector3(x, v3.y, v3.z);
+                case VectorOperator.Add:
+                    return new Vector3(v3.x + x, v3.y, v3.z);
+                case VectorOperator.Sub:
+                    return new Vector3(v3.x - x, v3.y, v3.z);
+                case VectorOperator.Multi:
+                    return new Vector3(v3.x * x, v3.y, v3.z);
+                case VectorOperator.Divide:
+                    return new Vector3(v3.x / x, v3.y, v3.z);
+                case VectorOperator.Mud:
+                    return new Vector3(v3.x % x, v3.y, v3.z);
+                default:
+                    return new Vector3(x, v3.y, v3.z);
+            }
         }
 
-        public static Vector3 ChangeY(this Vector3 v3, float y)
+        public static Vector3 ChangeY(this Vector3 v3, float y,VectorOperator vOp = VectorOperator.Equal)
         {
-            return new Vector3(v3.x, y, v3.z);
+            switch (vOp)
+            {
+                case VectorOperator.Equal:
+                    return new Vector3(v3.x, y, v3.z);
+                case VectorOperator.Add:
+                    return new Vector3(v3.x, v3.y + y, v3.z);
+                case VectorOperator.Sub:
+                    return new Vector3(v3.x, v3.y - y, v3.z);
+                case VectorOperator.Multi:
+                    return new Vector3(v3.x, v3.y * y, v3.z);
+                case VectorOperator.Divide:
+                    return new Vector3(v3.x, v3.y / y, v3.z);
+                case VectorOperator.Mud:
+                    return new Vector3(v3.x, v3.y % y, v3.z);
+                default:
+                    return new Vector3(v3.x, y, v3.z);
+            }
         }
 
-        public static Vector3 ChangeZ(this Vector3 v3, float z)
+        public static Vector3 ChangeZ(this Vector3 v3, float z,VectorOperator vOp = VectorOperator.Equal)
         {
-            return new Vector3(v3.x, v3.y, z);
+            switch (vOp)
+            {
+                case VectorOperator.Equal:
+                    return new Vector3(v3.x, v3.y, z);
+                case VectorOperator.Add:
+                    return new Vector3(v3.x, v3.y,v3.z + z);
+                case VectorOperator.Sub:
+                    return new Vector3(v3.x, v3.y, v3.z - z);
+                case VectorOperator.Multi:
+                    return new Vector3(v3.x, v3.y, v3.z * z);
+                case VectorOperator.Divide:
+                    return new Vector3(v3.x, v3.y, v3.z / z);
+                case VectorOperator.Mud:
+                    return new Vector3(v3.x, v3.y, v3.z % z);
+                default:
+                    return new Vector3(v3.x, v3.y, z);
+            }
         }
+
 
         public static Vector3 Divide(this Vector3 v3, Vector3 v3d)
         {

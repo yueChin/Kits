@@ -13,26 +13,58 @@ namespace Kits.ClientKit.Handlers.ValueType
             return new Vector2(f, f);
         }
 
-        public static Vector2 Y2Zero(Vector2 v2)
+        public static Vector2 Y2Zero(this Vector2 v2)
         {
-            return new Vector2(v2.x, 0);
+            return v2.ChangeY(0);
         }
 
-        public static Vector2 X2Zero(Vector2 v2)
+        public static Vector2 X2Zero(this Vector2 v2)
         {
-            return new Vector2(0, v2.y);
+            return v2.ChangeX(0);
         }
 
-        public static Vector2 ChangeX(Vector2 v2, float x)
+        public static Vector3 ChangeX(this Vector2 v3, float x,VectorOperator vOp = VectorOperator.Equal)
         {
-            return new Vector2(x, v2.y);
+            switch (vOp)
+            {
+                case VectorOperator.Equal:
+                    return new Vector3(x, v3.y);
+                case VectorOperator.Add:
+                    return new Vector3(v3.x + x, v3.y);
+                case VectorOperator.Sub:
+                    return new Vector3(v3.x - x, v3.y);
+                case VectorOperator.Multi:
+                    return new Vector3(v3.x * x, v3.y);
+                case VectorOperator.Divide:
+                    return new Vector3(v3.x / x, v3.y);
+                case VectorOperator.Mud:
+                    return new Vector3(v3.x % x, v3.y);
+                default:
+                    return new Vector3(x, v3.y);
+            }
         }
 
-        public static Vector2 ChangeY(Vector2 v2, float y)
+        public static Vector3 ChangeY(this Vector2 v3, float y,VectorOperator vOp = VectorOperator.Equal)
         {
-            return new Vector2(v2.x, y);
+            switch (vOp)
+            {
+                case VectorOperator.Equal:
+                    return new Vector3(v3.x, y);
+                case VectorOperator.Add:
+                    return new Vector3(v3.x, v3.y + y);
+                case VectorOperator.Sub:
+                    return new Vector3(v3.x, v3.y - y);
+                case VectorOperator.Multi:
+                    return new Vector3(v3.x, v3.y * y);
+                case VectorOperator.Divide:
+                    return new Vector3(v3.x, v3.y / y);
+                case VectorOperator.Mud:
+                    return new Vector3(v3.x, v3.y % y);
+                default:
+                    return new Vector3(v3.x, y);
+            }
         }
-        
+
         public static Vector2 YX(this Vector2 v)
         {
             return new Vector2(v.y, v.x);

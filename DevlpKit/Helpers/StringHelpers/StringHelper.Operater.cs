@@ -3,7 +3,7 @@ using System.Text;
 
 namespace Kits.DevlpKit.Helpers.StringHelpers
 {
-    public static partial class StrOperateHelper
+    public static partial class StringHelper
     {
         /// <summary>
         /// 找到第一个空白字符

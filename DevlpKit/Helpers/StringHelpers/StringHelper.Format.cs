@@ -6,7 +6,7 @@ namespace Kits.DevlpKit.Helpers.StringHelpers
     /// <summary>
     /// 字符相关的实用函数。
     /// </summary>
-    public static class StrFormatHelper
+    public static partial class StringHelper
     {
         private const int c_StringBuilderCapacity = 1024;
 

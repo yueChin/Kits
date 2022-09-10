@@ -2,7 +2,7 @@
 
 namespace Kits.DevlpKit.Helpers.StringHelpers
 {
-    public partial class StrConvertHelper
+    public static partial class StringHelper
     {
         static readonly double[] pow309 = new double[309];
         static readonly double[] pow309negative = new double[309];

@@ -6,7 +6,7 @@ using System.Text.RegularExpressions;
 
 namespace Kits.DevlpKit.Helpers.StringHelpers
 {
-	public static partial class StrConvertHelper
+	public static partial class StringHelper
 	{
 		public static IEnumerable<byte> ToBytes(this string str)
 		{

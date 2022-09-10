@@ -3,7 +3,7 @@ using System.Threading;
 
 namespace Kits.DevlpKit.Helpers.StringHelpers
 {
-    public static class StrConcatHelper
+    public static partial class StringHelper
     {
         static readonly ThreadLocal<StringBuilder> s_StringBuilder = new ThreadLocal<StringBuilder>(() => new StringBuilder(256));
 

@@ -5,7 +5,7 @@ namespace Kits.DevlpKit.Helpers
     /// <summary>
     /// 数学工具箱
     /// </summary>
-    public static class MathHelper
+    public static partial class MathHelper
     {
         public const double PI = 3.141593d;
         

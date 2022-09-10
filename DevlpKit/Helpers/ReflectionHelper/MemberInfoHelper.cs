@@ -11,98 +11,105 @@ namespace Kits.DevlpKit.Helpers.ReflectionHelper
             Type type = typeof(T);
             return GetMemberValue(type, memberName);
         }
-        
-        public static object GetMemberValue(string typeName, string memberName) 
+
+        public static object GetMemberValue(string typeName, string memberName)
         {
-            Type type = TypeInfoHelper.GetType( typeName );
+            Type type = TypeInfoHelper.GetType(typeName);
             return GetMemberValue(type, memberName);
         }
-        
-        public static object GetMemberValue( Type type, string memberName, object instance = null ) {
+
+        public static object GetMemberValue(Type type, string memberName, object instance = null)
+        {
             object value = null;
-            if ( type != null || instance != null ) 
+            if (type != null || instance != null)
             {
                 BindingFlags flags = BindingFlags.Public | BindingFlags.NonPublic;
-                if ( type == null ) 
+                if (type == null)
                 {
                     type = instance.GetType();
                     flags |= BindingFlags.Instance;
-                } else 
+                }
+                else
                 {
                     instance = null;
                     flags |= BindingFlags.Static;
                 }
-                MemberInfo[] members = type.GetMembers( flags );
-                for ( int i = 0, count = members.Length; i < count && value == null; ++i ) 
+
+                MemberInfo[] members = type.GetMembers(flags);
+                for (int i = 0, count = members.Length; i < count && value == null; ++i)
                 {
-                    MemberInfo m = members[ i ];
-                    if (( m.MemberType == MemberTypes.Field || m.MemberType == MemberTypes.Property ) &&
-                         m.Name == memberName ) 
+                    MemberInfo m = members[i];
+                    if ((m.MemberType == MemberTypes.Field || m.MemberType == MemberTypes.Property) &&
+                        m.Name == memberName)
                     {
                         PropertyInfo pi = m as PropertyInfo;
-                        if ( pi != null ) 
+                        if (pi != null)
                         {
-                            value = pi.GetValue( instance, null );
-                        } else 
+                            value = pi.GetValue(instance, null);
+                        }
+                        else
                         {
                             FieldInfo fi = m as FieldInfo;
-                            if ( fi != null ) 
+                            if (fi != null)
                             {
-                                value = fi.GetValue( instance );
+                                value = fi.GetValue(instance);
                             }
                         }
                     }
                 }
             }
+
             return value;
         }
-        
-        public static bool SetMemberValue( string typeName, string memberName, object value) 
+
+        public static bool SetMemberValue(string typeName, string memberName, object value)
         {
-            Type type = TypeInfoHelper.GetType( typeName );
-            return SetMemberValue(type,memberName,value);
+            Type type = TypeInfoHelper.GetType(typeName);
+            return SetMemberValue(type, memberName, value);
         }
 
-        public static bool SetMemberValue( Type type, string memberName, object value, object instance = null ) 
+        public static bool SetMemberValue(Type type, string memberName, object value, object instance = null)
         {
-            if ( type != null || instance != null ) 
+            if (type != null || instance != null)
             {
                 BindingFlags flags = BindingFlags.Public | BindingFlags.NonPublic;
-                if ( type == null ) 
+                if (type == null)
                 {
                     type = instance.GetType();
                     flags |= BindingFlags.Instance;
-                } 
-                else 
+                }
+                else
                 {
                     instance = null;
                     flags |= BindingFlags.Static;
                 }
-                MemberInfo[] members = type.GetMembers( flags );
-                for ( int i = 0; i < members.Length; ++i )
+
+                MemberInfo[] members = type.GetMembers(flags);
+                for (int i = 0; i < members.Length; ++i)
                 {
-                    MemberInfo m = members[ i ];
-                    if ( ( m.MemberType == MemberTypes.Field || m.MemberType == MemberTypes.Property ) &&
-                        m.Name == memberName ) 
+                    MemberInfo m = members[i];
+                    if ((m.MemberType == MemberTypes.Field || m.MemberType == MemberTypes.Property) &&
+                        m.Name == memberName)
                     {
                         PropertyInfo pi = m as PropertyInfo;
-                        if ( pi != null )
+                        if (pi != null)
                         {
-                            pi.SetValue( instance, value, null );
+                            pi.SetValue(instance, value, null);
                             return true;
                         }
-                        else 
+                        else
                         {
                             FieldInfo fi = m as FieldInfo;
-                            if ( fi != null && fi.IsLiteral == false && fi.IsInitOnly == false ) 
+                            if (fi != null && fi.IsLiteral == false && fi.IsInitOnly == false)
                             {
-                                fi.SetValue( instance, value );
+                                fi.SetValue(instance, value);
                                 return true;
                             }
                         }
                     }
                 }
             }
+
             return false;
         }
     }

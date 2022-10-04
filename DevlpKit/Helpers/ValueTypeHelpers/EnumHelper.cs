@@ -1,28 +1,29 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
+using System.Linq;//TODO 干掉linq
 using Random = Kits.DevlpKit.Supplements.Structs.Random;
 
 namespace Kits.DevlpKit.Helpers.ValueTypeHelpers
 {
-	public static class EnumHelper
-	{
-		public static int EnumIndex<T>(int value)
-		{
-			int i = 0;
-			foreach (object v in Enum.GetValues(typeof (T)))
-			{
-				if ((int) v == value)
-				{
-					return i;
-				}
-				++i;
-			}
-			return -1;
-		}
+    public static class EnumHelper
+    {
+        public static int EnumIndex<T>(int value)
+        {
+            int i = 0;
+            foreach (object v in Enum.GetValues(typeof(T)))
+            {
+                if ((int)v == value)
+                {
+                    return i;
+                }
 
-		public static T FromString<T>(string str)
-		{
+                ++i;
+            }
+            return -1;
+        }
+
+        public static T FromString<T>(string str)
+        {
             if (!Enum.IsDefined(typeof(T), str))
             {
                 return default(T);
@@ -118,6 +119,7 @@ namespace Kits.DevlpKit.Helpers.ValueTypeHelpers
             {
                 lValue &= (~lFlag);
             }
+
             return (T)Enum.ToObject(typeof(T), lValue);
         }
 
@@ -161,6 +163,7 @@ namespace Kits.DevlpKit.Helpers.ValueTypeHelpers
                 long lFlag = Convert.ToInt64(flag);
                 lValue |= lFlag;
             }
+
             return (T)Enum.ToObject(typeof(T), lValue);
         }
 
@@ -177,8 +180,8 @@ namespace Kits.DevlpKit.Helpers.ValueTypeHelpers
             T[] flagValues = Enum.GetValues(typeof(T)).Cast<T>().Where(x => value.HasFlag(x)).ToArray();
             return flagValues[random.Range(0, flagValues.Length)];
         }
-        
-        
+
+
         /// <summary>
         /// Returns the order number of an enum (this is NOT the enum int value, but the position in the definition of possible enum values)
         /// </summary>

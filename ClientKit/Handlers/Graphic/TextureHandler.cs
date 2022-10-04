@@ -212,17 +212,18 @@ namespace Kits.ClientKit.Handlers.Graphic
             {
                 if (i < (border.bottom * width))
                     pixels[i] = borderColor;
-                else if (i >= ((border.bottom * width) + (height * width)))  //Border Top
+                else if (i >= ((border.bottom * width) + (height * width))) //Border Top
                     pixels[i] = borderColor;
                 else
-                { //Center of Texture
+                {
+                    //Center of Texture
 
                     if ((i % width) < border.left) // Border left
                         pixels[i] = borderColor;
                     else if ((i % width) >= (border.left + innerWidth)) //Border right
                         pixels[i] = borderColor;
                     else
-                        pixels[i] = textureColor;    //Color texture
+                        pixels[i] = textureColor; //Color texture
                 }
             }
 
@@ -232,7 +233,7 @@ namespace Kits.ClientKit.Handlers.Graphic
 
             return texture;
         }
-        
+
         public static Texture2D GetBGTexture(Color backgroundColor, List<Texture2D> tempTextureList)
         {
             int res = 1;
@@ -285,7 +286,7 @@ namespace Kits.ClientKit.Handlers.Graphic
 
             return tex;
         }
-        
+
         /// <summary>
         /// Converts a Render Texture to texture 2D by reading the pixels from it.
         /// </summary>
@@ -301,7 +302,7 @@ namespace Kits.ClientKit.Handlers.Graphic
             RenderTexture.active = currentRT;
             return output;
         }
-        
+
         /// <summary>
         /// Convert the supplied texture to an array based on grayscale value
         /// </summary>
@@ -317,10 +318,25 @@ namespace Kits.ClientKit.Handlers.Graphic
                     array[x, z] = texture.GetPixel(x, z).grayscale;
                 }
             }
+
             return array;
         }
-        
 
+        private static Texture2D TextureToTexture2D(Texture texture)
+        {
+            Texture2D texture2D = new Texture2D(texture.width, texture.height, TextureFormat.RGBA32, false);
+            RenderTexture currentRT = RenderTexture.active;
+            RenderTexture renderTexture = RenderTexture.GetTemporary(texture.width, texture.height, 32);
+            Graphics.Blit(texture, renderTexture);
 
+            RenderTexture.active = renderTexture;
+            texture2D.ReadPixels(new Rect(0, 0, renderTexture.width, renderTexture.height), 0, 0);
+            texture2D.Apply();
+
+            RenderTexture.active = currentRT;
+            RenderTexture.ReleaseTemporary(renderTexture);
+
+            return texture2D;
+        }
     }
 }

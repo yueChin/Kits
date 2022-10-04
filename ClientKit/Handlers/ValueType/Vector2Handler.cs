@@ -23,6 +23,11 @@ namespace Kits.ClientKit.Handlers.ValueType
             return v2.ChangeX(0);
         }
 
+        public static float Cross(this Vector2 a,Vector2 b)
+        {
+            return (a.x * b.y - b.x * a.y);
+        }
+        
         public static Vector3 ChangeX(this Vector2 v3, float x,VectorOperator vOp = VectorOperator.Equal)
         {
             switch (vOp)

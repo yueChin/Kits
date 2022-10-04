@@ -376,5 +376,19 @@ namespace Kits.ClientKit.Handlers.ValueType
             rThis.w = float.Parse(lTemp[3]);
             return rThis;
         }
+        
+        /// <summary>
+        /// 插值180不反转
+        /// </summary>
+        public static Quaternion Lerp(Quaternion form, Quaternion to, float t)
+        {
+            Vector4 a1v = new Vector4(
+                form.x + t * (to.x - form.x),
+                form.y + t * (to.y - form.y),
+                form.z + t * (to.z - form.z),
+                form.w + t * (to.w - form.w)
+            ).normalized;
+            return new Quaternion(a1v.x, a1v.y, a1v.z, a1v.w);
+        }
     }
 }

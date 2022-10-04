@@ -75,6 +75,21 @@ namespace Kits.ClientKit.Handlers.ValueType
             return new Vector2(v.y, v.x);
         }
         
+        public static Vector3 V2ToV3EmptyX(Vector2 v)
+        {
+            return new Vector3(0.0f,v.x, v.y);
+        }
+        
+        public static Vector3 V2ToV3EmptyY(Vector2 v)
+        {
+            return new Vector3(v.x, 0.0f, v.y);
+        }
+        
+        public static Vector3 V2ToV3EmptyZ(Vector2 v)
+        {
+            return new Vector3(v.x, v.y, 0.0f);
+        }
+        
         public static bool Approximately(this Vector2 v2,Vector2 v2a,float delta = 0)
         {
             if (delta == 0)

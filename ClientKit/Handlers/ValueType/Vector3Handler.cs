@@ -11,7 +11,7 @@ namespace Kits.ClientKit.Handlers.ValueType
         Divide,
         Mud,
     }
-    
+
     public static class Vector3Handler
     {
 
@@ -43,7 +43,7 @@ namespace Kits.ClientKit.Handlers.ValueType
             return v3.ChangeZ(0);
         }
 
-        public static Vector3 ChangeX(this Vector3 v3, float x,VectorOperator vOp = VectorOperator.Equal)
+        public static Vector3 ChangeX(this Vector3 v3, float x, VectorOperator vOp = VectorOperator.Equal)
         {
             switch (vOp)
             {
@@ -64,7 +64,7 @@ namespace Kits.ClientKit.Handlers.ValueType
             }
         }
 
-        public static Vector3 ChangeY(this Vector3 v3, float y,VectorOperator vOp = VectorOperator.Equal)
+        public static Vector3 ChangeY(this Vector3 v3, float y, VectorOperator vOp = VectorOperator.Equal)
         {
             switch (vOp)
             {
@@ -85,14 +85,14 @@ namespace Kits.ClientKit.Handlers.ValueType
             }
         }
 
-        public static Vector3 ChangeZ(this Vector3 v3, float z,VectorOperator vOp = VectorOperator.Equal)
+        public static Vector3 ChangeZ(this Vector3 v3, float z, VectorOperator vOp = VectorOperator.Equal)
         {
             switch (vOp)
             {
                 case VectorOperator.Equal:
                     return new Vector3(v3.x, v3.y, z);
                 case VectorOperator.Add:
-                    return new Vector3(v3.x, v3.y,v3.z + z);
+                    return new Vector3(v3.x, v3.y, v3.z + z);
                 case VectorOperator.Sub:
                     return new Vector3(v3.x, v3.y, v3.z - z);
                 case VectorOperator.Multi:
@@ -136,12 +136,12 @@ namespace Kits.ClientKit.Handlers.ValueType
         {
             return new Vector2(v.x, v.z);
         }
-        
+
         public static Vector2 YX(this Vector3 v)
         {
             return new Vector2(v.y, v.x);
         }
-        
+
         public static Vector2 YZ(this Vector3 v)
         {
             return new Vector2(v.y, v.z);
@@ -151,13 +151,33 @@ namespace Kits.ClientKit.Handlers.ValueType
         {
             return new Vector2(v.z, v.x);
         }
-        
+
         public static Vector2 ZY(this Vector3 v)
         {
             return new Vector2(v.z, v.y);
         }
-        
-        public static bool Approximately(this Vector3 v3,Vector3 v3a,float delta = 0)
+
+        public static Vector4 V3ToV4EmptyX(Vector3 v)
+        {
+            return new Vector4(0.0f, v.x, v.y, v.z);
+        }
+
+        public static Vector3 V3ToV4EmptyY(Vector3 v)
+        {
+            return new Vector4(v.x, 0.0f, v.y, v.z);
+        }
+
+        public static Vector4 V3ToV4EmptyZ(Vector3 v)
+        {
+            return new Vector4(v.x, v.y, 0.0f, v.z);
+        }
+
+        public static Vector4 V3ToV4EmptyW(Vector3 v)
+        {
+            return new Vector4(v.x, v.y, v.z, 0.0f);
+        }
+
+        public static bool Approximately(this Vector3 v3, Vector3 v3a, float delta = 0)
         {
             if (delta == 0)
             {

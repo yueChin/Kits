@@ -343,5 +343,31 @@ namespace Kits.ClientKit.Handlers.Transform
 			rectTransform.pivot = pivot;
 			rectTransform.localPosition -= deltaPosition; 
 		}
+		
+		public static Vector3 ScreenPointToUIPoint(RectTransform rt,UnityEngine.Camera uiCamera, Vector2 screenPoint)
+		{
+			Vector3 globalMousePos;
+			//UI屏幕坐标转换为世界坐标
+			// 当 Canvas renderMode 为 RenderMode.ScreenSpaceCamera、RenderMode.WorldSpace 时 uiCamera 不能为空
+			// 当 Canvas renderMode 为 RenderMode.ScreenSpaceOverlay 时 uiCamera 可以为空
+			RectTransformUtility.ScreenPointToWorldPointInRectangle(rt, screenPoint, uiCamera, out globalMousePos);
+			// 转换后的 globalMousePos 使用下面方法赋值
+			// target 为需要使用的 UI RectTransform
+			// rt 可以是 target.GetComponent<RectTransform>(), 也可以是 target.parent.GetComponent<RectTransform>()
+			// target.transform.position = globalMousePos;
+			return globalMousePos;
+		}
+
+		// 屏幕坐标转换为 UGUI RectTransform 的 anchoredPosition
+		public static Vector2 ScreenPointToUILocalPoint(RectTransform parentRT,UnityEngine.Camera uiCamera, Vector2 screenPoint)
+		{
+			Vector2 localPos;
+			RectTransformUtility.ScreenPointToLocalPointInRectangle(parentRT, screenPoint, uiCamera, out localPos);
+			// 转换后的 localPos 使用下面方法赋值
+			// target 为需要使用的 UI RectTransform
+			// parentRT 是 target.parent.GetComponent<RectTransform>()
+			// 最后赋值 target.anchoredPosition = localPos;
+			return localPos;
+		}
     }
 }

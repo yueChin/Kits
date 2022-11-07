@@ -28,17 +28,17 @@ namespace Kits.ClientKit.Handlers.ValueType
             return new Vector3(f, f, f);
         }
 
-        public static Vector3 V3X(this float f)
+        public static Vector3 X2V3(this float f)
         {
             return new Vector3(f, 0, 0);
         }
         
-        public static Vector3 V3Y(this float f)
+        public static Vector3 Y2V3(this float f)
         {
             return new Vector3(0, f, 0);
         }
         
-        public static Vector3 V3Z(this float f)
+        public static Vector3 Z2V3(this float f)
         {
             return new Vector3(0, 0, f);
         }

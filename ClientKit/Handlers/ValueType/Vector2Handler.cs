@@ -13,12 +13,12 @@ namespace Kits.ClientKit.Handlers.ValueType
             return new Vector2(f, f);
         }
 
-        public static Vector2 V2X(float f)
+        public static Vector2 X2V2(float f)
         {
             return new Vector2(f, 0);
         }
         
-        public static Vector2 V2XY(float f)
+        public static Vector2 Y2V2(float f)
         {
             return new Vector2(0, f);
         }

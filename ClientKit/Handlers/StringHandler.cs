@@ -12,7 +12,7 @@ namespace Kits.ClientKit.Handlers
 		/// </summary>
 		public static Vector3 StringToVector3(string str, char separator)
 		{
-			List<float> values = StrConvertHelper.StringToValueList<float>(str, separator);
+			List<float> values = StringHelper.StringToValueList<float>(str, separator);
 			return new Vector3(values[0], values[1], values[2]);
 		}
 		

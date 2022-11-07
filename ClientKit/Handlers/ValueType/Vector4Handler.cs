@@ -16,6 +16,26 @@ namespace Kits.ClientKit.Handlers.ValueType
         {
             return new Vector4(f, f, f,f);
         }
+        
+        public static Vector4 V4X(this float f)
+        {
+            return new Vector4(f, 0, 0,0);
+        }
+
+        public static Vector4 V4Y(this float f)
+        {
+            return new Vector4(0, f, 0,0);
+        }
+
+        public static Vector4 V4Z(this float f)
+        {
+            return new Vector4(0, 0, f,0);
+        }
+
+        public static Vector4 V4W(this float f)
+        {
+            return new Vector4(0, 0, 0,f);
+        }
 
         public static Vector4 X2Zero(this Vector4 v4)
         {

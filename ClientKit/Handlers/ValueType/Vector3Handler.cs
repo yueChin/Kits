@@ -28,6 +28,21 @@ namespace Kits.ClientKit.Handlers.ValueType
             return new Vector3(f, f, f);
         }
 
+        public static Vector3 V3X(this float f)
+        {
+            return new Vector3(f, 0, 0);
+        }
+        
+        public static Vector3 V3Y(this float f)
+        {
+            return new Vector3(0, f, 0);
+        }
+        
+        public static Vector3 V3Z(this float f)
+        {
+            return new Vector3(0, 0, f);
+        }
+        
         public static Vector3 X2Zero(this Vector3 v3)
         {
             return v3.ChangeX(0);

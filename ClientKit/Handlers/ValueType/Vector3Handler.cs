@@ -43,6 +43,21 @@ namespace Kits.ClientKit.Handlers.ValueType
             return new Vector3(0, 0, f);
         }
         
+        public static Vector3 HoldX(this Vector3 v3)
+        {
+            return new Vector3(v3.x, 0, 0);
+        }
+
+        public static Vector3 HoldY(this Vector3 v3)
+        {
+            return new Vector3(0, v3.y, 0);
+        }
+        
+        public static Vector3 HoldZ(this Vector3 v3)
+        {
+            return new Vector3(0, 0,v3.z);
+        }
+        
         public static Vector3 X2Zero(this Vector3 v3)
         {
             return v3.ChangeX(0);

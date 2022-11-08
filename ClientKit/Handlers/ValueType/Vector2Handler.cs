@@ -23,6 +23,16 @@ namespace Kits.ClientKit.Handlers.ValueType
             return new Vector2(0, f);
         }
         
+        public static Vector2 HoldX(this Vector2 v2)
+        {
+            return new Vector2(v2.x, 0);
+        }
+
+        public static Vector2 HoldY(this Vector2 v2)
+        {
+            return new Vector2(0, v2.y);
+        }
+        
         public static Vector2 Y2Zero(this Vector2 v2)
         {
             return v2.ChangeY(0);

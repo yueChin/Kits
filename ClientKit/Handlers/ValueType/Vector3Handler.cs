@@ -28,17 +28,17 @@ namespace Kits.ClientKit.Handlers.ValueType
             return new Vector3(f, f, f);
         }
 
-        public static Vector3 X2V3(this float f)
+        public static Vector3 XToV3(this float f)
         {
             return new Vector3(f, 0, 0);
         }
         
-        public static Vector3 Y2V3(this float f)
+        public static Vector3 YToV3(this float f)
         {
             return new Vector3(0, f, 0);
         }
         
-        public static Vector3 Z2V3(this float f)
+        public static Vector3 ZToV3(this float f)
         {
             return new Vector3(0, 0, f);
         }
@@ -56,6 +56,76 @@ namespace Kits.ClientKit.Handlers.ValueType
         public static Vector3 HoldZ(this Vector3 v3)
         {
             return new Vector3(0, 0,v3.z);
+        }
+        
+        public static Vector3 MergeX(this Vector3 v3,Vector2 v2T)
+        {
+            return new Vector3(v2T.x, v3.y, v3.z);
+        }
+
+        public static Vector3 MergeX(this Vector3 v3,Vector3 v3T)
+        {
+            return new Vector3(v3T.x, v3.y, v3.z);
+        }
+        
+        public static Vector3 MergeX(this Vector3 v3,Vector4 v4T)
+        {
+            return new Vector3(v4T.x, v3.y, v3.z);
+        }
+        
+        public static Vector3 MergeY(this Vector3 v3,Vector2 v2T)
+        {
+            return new Vector3(v3.x, v2T.y, v3.z);
+        }
+        
+        public static Vector3 MergeY(this Vector3 v3,Vector3 v3T)
+        {
+            return new Vector3(v3.x, v3T.y, v3.z);
+        }
+        
+        public static Vector3 MergeY(this Vector3 v3,Vector4 v4T)
+        {
+            return new Vector3(v3.x, v4T.y, v3.z);
+        }
+        
+        public static Vector3 MergeZ(this Vector3 v3,Vector3 v3T)
+        {
+            return new Vector3(v3.x, v3.y, v3T.z);
+        }
+        
+        public static Vector3 MergeZ(this Vector3 v3,Vector4 v4T)
+        {
+            return new Vector3(v3.x, v3.y, v4T.z);
+        }
+        
+        public static Vector3 MergeXY(this Vector3 v3,Vector2 v2T)
+        {
+            return new Vector3(v2T.x, v2T.y, v3.z);
+        }
+        
+        public static Vector3 MergeXY(this Vector3 v3,Vector3 v3T)
+        {
+            return new Vector3(v3T.x, v3T.y, v3.z);
+        }
+        
+        public static Vector3 MergeXY(this Vector3 v3,Vector4 v4T)
+        {
+            return new Vector3(v4T.x, v4T.y, v3.z);
+        }
+        
+        public static Vector3 MergeXZ(this Vector3 v3,Vector3 v3T)
+        {
+            return new Vector3(v3T.x, v3.y, v3T.z);
+        }
+        
+        public static Vector3 MergeXZ(this Vector3 v3,Vector4 v4T)
+        {
+            return new Vector3(v4T.x, v3.y, v4T.z);
+        }
+        
+        public static Vector3 MergeYZ(this Vector3 v3,Vector4 v4T)
+        {
+            return new Vector3(v3.x, v4T.y, v4T.z);
         }
         
         public static Vector3 X2Zero(this Vector3 v3)
@@ -147,14 +217,14 @@ namespace Kits.ClientKit.Handlers.ValueType
             return new Vector3(v3.x / v2d.x, v3.y / v2d.y, 0);
         }
 
-        public static Vector3 Multi(this Vector3 v3, Vector3 v3m)
+        public static Vector3 Multi(this Vector3 v3, Vector3 v3M)
         {
-            return new Vector3(v3.x * v3m.x, v3.y * v3m.y, v3.z * v3m.z);
+            return new Vector3(v3.x * v3M.x, v3.y * v3M.y, v3.z * v3M.z);
         }
 
-        public static Vector3 Multi(this Vector3 v3, Vector2 v2m)
+        public static Vector3 Multi(this Vector3 v3, Vector2 v2M)
         {
-            return new Vector3(v3.x * v2m.x, v3.y * v2m.y, 0);
+            return new Vector3(v3.x * v2M.x, v3.y * v2M.y, 0);
         }
 
         public static Vector2 XY(this Vector3 v)
@@ -167,7 +237,7 @@ namespace Kits.ClientKit.Handlers.ValueType
             return new Vector2(v.x, v.z);
         }
 
-        public static Vector2 YX(this Vector3 v)
+        public static Vector2 Yx(this Vector3 v)
         {
             return new Vector2(v.y, v.x);
         }
@@ -177,12 +247,12 @@ namespace Kits.ClientKit.Handlers.ValueType
             return new Vector2(v.y, v.z);
         }
 
-        public static Vector2 ZX(this Vector3 v)
+        public static Vector2 Zx(this Vector3 v)
         {
             return new Vector2(v.z, v.x);
         }
 
-        public static Vector2 ZY(this Vector3 v)
+        public static Vector2 Zy(this Vector3 v)
         {
             return new Vector2(v.z, v.y);
         }
@@ -207,17 +277,17 @@ namespace Kits.ClientKit.Handlers.ValueType
             return new Vector4(v.x, v.y, v.z, 0.0f);
         }
 
-        public static bool Approximately(this Vector3 v3, Vector3 v3a, float delta = 0)
+        public static bool Approximately(this Vector3 v3, Vector3 v3A, float delta = 0)
         {
             if (delta == 0)
             {
-                return Mathf.Approximately(v3.x, v3a.x) && Mathf.Approximately(v3.y, v3a.y) && Mathf.Approximately(v3.z, v3a.z);
+                return Mathf.Approximately(v3.x, v3A.x) && Mathf.Approximately(v3.y, v3A.y) && Mathf.Approximately(v3.z, v3A.z);
             }
             else
             {
-                float x = Mathf.Abs(v3.x - v3a.x);
-                float y = Mathf.Abs(v3.y - v3a.y);
-                float z = Mathf.Abs(v3.x - v3a.z);
+                float x = Mathf.Abs(v3.x - v3A.x);
+                float y = Mathf.Abs(v3.y - v3A.y);
+                float z = Mathf.Abs(v3.x - v3A.z);
                 return x < delta && y < delta && z < delta;
             }
         }

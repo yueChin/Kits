@@ -77,6 +77,96 @@ namespace Kits.ClientKit.Handlers.ValueType
             return v4.ChangeW(0);
         }
 
+        public static Vector4 MergeX(this Vector4 v4,Vector2 v2T)
+        {
+            return new Vector4(v2T.x, v4.y, v4.z, v4.w);
+        }
+        
+        public static Vector4 MergeX(this Vector4 v4,Vector3 v3T)
+        {
+            return new Vector4(v3T.x, v4.y, v4.z, v4.w);
+        }
+        
+        public static Vector4 MergeX(this Vector4 v4,Vector4 v4T)
+        {
+            return new Vector4(v4T.x, v4.y, v4.z, v4.w);
+        }
+        
+        public static Vector4 MergeY(this Vector4 v4,Vector2 v2T)
+        {
+            return new Vector4(v4.x, v2T.y, v4.z, v4.w);
+        }
+        
+        public static Vector4 MergeY(this Vector4 v4,Vector3 v3T)
+        {
+            return new Vector4(v4.x, v3T.y, v4.z, v4.w);
+        }
+        
+        public static Vector4 MergeY(this Vector4 v4,Vector4 v4T)
+        {
+            return new Vector4(v4.x, v4T.y, v4.z, v4.w);
+        }
+        
+        public static Vector4 MergeZ(this Vector4 v4,Vector3 v3T)
+        {
+            return new Vector4(v4.x, v4.y, v3T.z, v4.w);
+        }
+        
+        public static Vector4 MergeZ(this Vector4 v4,Vector4 v4T)
+        {
+            return new Vector4(v4.x, v4.y, v4T.z, v4.w);
+        }
+        
+        public static Vector4 MergeW(this Vector4 v4,Vector4 v4T)
+        {
+            return new Vector4(v4.x, v4.y, v4.z, v4T.w);
+        }
+        
+        public static Vector4 MergeXY(this Vector4 v4,Vector2 v2T)
+        {
+            return new Vector4(v2T.x, v2T.y, v4.z, v4.w);
+        }
+        
+        public static Vector4 MergeXY(this Vector4 v4,Vector3 v3T)
+        {
+            return new Vector4(v3T.x, v3T.y, v4.z, v4.w);
+        }
+        
+        public static Vector4 MergeXY(this Vector4 v4,Vector4 v4T)
+        {
+            return new Vector4(v4T.x, v4T.y, v4.z, v4.w);
+        }
+        
+        public static Vector4 MergeXZ(this Vector4 v4,Vector3 v3T)
+        {
+            return new Vector4(v3T.x, v4.y, v3T.z, v4.w);
+        }
+        
+        public static Vector4 MergeXZ(this Vector4 v4,Vector4 v4T)
+        {
+            return new Vector4(v4T.x, v4.y, v4T.z, v4.w);
+        }
+        
+        public static Vector4 MergeXW(this Vector4 v4,Vector4 v4T)
+        {
+            return new Vector4(v4T.x, v4.y, v4.z, v4T.w);
+        }
+        
+        public static Vector4 MergeYZ(this Vector4 v4,Vector3 v3T)
+        {
+            return new Vector4(v4.x, v3T.y, v3T.z, v4.w);
+        }
+        
+        public static Vector4 MergeYW(this Vector4 v4,Vector4 v4T)
+        {
+            return new Vector4(v4.x, v4T.y, v4.z, v4T.w);
+        }
+        
+        public static Vector4 MergeZW(this Vector4 v4,Vector4 v4T)
+        {
+            return new Vector4(v4.x, v4.y, v4T.z, v4T.w);
+        }
+        
         public static Vector4 ChangeX(this Vector4 v4, float x, VectorOperator vOp = VectorOperator.Equal)
         {
             switch (vOp)
@@ -176,19 +266,19 @@ namespace Kits.ClientKit.Handlers.ValueType
             return new Vector4(v4.x / v2d.x, v4.y / v2d.y, 0, 0);
         }
 
-        public static Vector4 Multi(this Vector4 v4, Vector4 v4m)
+        public static Vector4 Multi(this Vector4 v4, Vector4 v4M)
         {
-            return new Vector4(v4.x * v4m.x, v4.y * v4m.y, v4.z * v4m.z);
+            return new Vector4(v4.x * v4M.x, v4.y * v4M.y, v4.z * v4M.z);
         }
 
-        public static Vector4 Multi(this Vector4 v4, Vector3 v3m)
+        public static Vector4 Multi(this Vector4 v4, Vector3 v3M)
         {
-            return new Vector4(v4.x * v3m.x, v4.y * v3m.y, v4.z / v3m.z, 0);
+            return new Vector4(v4.x * v3M.x, v4.y * v3M.y, v4.z / v3M.z, 0);
         }
 
-        public static Vector4 Multi(this Vector4 v4, Vector2 v2m)
+        public static Vector4 Multi(this Vector4 v4, Vector2 v2M)
         {
-            return new Vector4(v4.x * v2m.x, v4.y * v2m.y, 0, 0);
+            return new Vector4(v4.x * v2M.x, v4.y * v2M.y, 0, 0);
         }
 
         public static Vector2 XY(this Vector4 v)
@@ -201,12 +291,12 @@ namespace Kits.ClientKit.Handlers.ValueType
             return new Vector2(v.x, v.z);
         }
 
-        public static Vector2 XW(this Vector4 v)
+        public static Vector2 Xw(this Vector4 v)
         {
             return new Vector2(v.x, v.w);
         }
 
-        public static Vector2 YX(this Vector4 v)
+        public static Vector2 Yx(this Vector4 v)
         {
             return new Vector2(v.y, v.w);
         }
@@ -216,38 +306,38 @@ namespace Kits.ClientKit.Handlers.ValueType
             return new Vector2(v.y, v.z);
         }
 
-        public static Vector2 YW(this Vector4 v)
+        public static Vector2 Yw(this Vector4 v)
         {
             return new Vector2(v.y, v.w);
         }
 
-        public static Vector2 ZX(this Vector4 v)
+        public static Vector2 Zx(this Vector4 v)
         {
             return new Vector2(v.z, v.x);
         }
 
-        public static Vector2 ZY(this Vector4 v)
+        public static Vector2 Zy(this Vector4 v)
         {
             return new Vector2(v.z, v.y);
         }
 
-        public static Vector2 ZW(this Vector4 v)
+        public static Vector2 Zw(this Vector4 v)
         {
             return new Vector2(v.z, v.w);
         }
 
-        public static bool Approximately(this Vector4 v4, Vector4 v4a, float delta = 0)
+        public static bool Approximately(this Vector4 v4, Vector4 v4A, float delta = 0)
         {
             if (delta == 0)
             {
-                return Mathf.Approximately(v4.x, v4a.x) && Mathf.Approximately(v4.y, v4a.y) && Mathf.Approximately(v4.z, v4a.z) && Mathf.Approximately(v4.w, v4a.w);
+                return Mathf.Approximately(v4.x, v4A.x) && Mathf.Approximately(v4.y, v4A.y) && Mathf.Approximately(v4.z, v4A.z) && Mathf.Approximately(v4.w, v4A.w);
             }
             else
             {
-                float x = Mathf.Abs(v4.x - v4a.x);
-                float y = Mathf.Abs(v4.y - v4a.y);
-                float z = Mathf.Abs(v4.z - v4a.z);
-                float w = Mathf.Abs(v4.w - v4a.w);
+                float x = Mathf.Abs(v4.x - v4A.x);
+                float y = Mathf.Abs(v4.y - v4A.y);
+                float z = Mathf.Abs(v4.z - v4A.z);
+                float w = Mathf.Abs(v4.w - v4A.w);
                 return x < delta && y < delta && z < delta && w < delta;
             }
         }

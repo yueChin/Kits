@@ -13,12 +13,12 @@ namespace Kits.ClientKit.Handlers.ValueType
             return new Vector2(f, f);
         }
 
-        public static Vector2 X2V2(float f)
+        public static Vector2 XToV2(float f)
         {
             return new Vector2(f, 0);
         }
         
-        public static Vector2 Y2V2(float f)
+        public static Vector2 YToV2(float f)
         {
             return new Vector2(0, f);
         }
@@ -31,6 +31,36 @@ namespace Kits.ClientKit.Handlers.ValueType
         public static Vector2 HoldY(this Vector2 v2)
         {
             return new Vector2(0, v2.y);
+        }
+
+        public static Vector2 MergeX(this Vector2 v2,Vector2 v2T)
+        {
+            return new Vector2(v2T.x, v2.y);
+        }
+        
+        public static Vector2 MergeX(this Vector2 v2,Vector3 v3T)
+        {
+            return new Vector2(v3T.x, v2.y);
+        }
+        
+        public static Vector2 MergeX(this Vector2 v2,Vector4 v4T)
+        {
+            return new Vector2(v4T.x, v2.y);
+        }
+        
+        public static Vector2 MergeY(this Vector2 v2,Vector2 v2T)
+        {
+            return new Vector2(v2.x, v2T.y);
+        }
+        
+        public static Vector2 MergeY(this Vector2 v2,Vector3 v3T)
+        {
+            return new Vector2(v2.x, v3T.y);
+        }
+        
+        public static Vector2 MergeY(this Vector2 v2,Vector4 v4T)
+        {
+            return new Vector2(v2.x, v4T.y);
         }
         
         public static Vector2 Y2Zero(this Vector2 v2)
@@ -90,7 +120,7 @@ namespace Kits.ClientKit.Handlers.ValueType
             }
         }
 
-        public static Vector2 YX(this Vector2 v)
+        public static Vector2 Yx(this Vector2 v)
         {
             return new Vector2(v.y, v.x);
         }
@@ -110,16 +140,16 @@ namespace Kits.ClientKit.Handlers.ValueType
             return new Vector3(v.x, v.y, 0.0f);
         }
         
-        public static bool Approximately(this Vector2 v2,Vector2 v2a,float delta = 0)
+        public static bool Approximately(this Vector2 v2,Vector2 v2A,float delta = 0)
         {
             if (delta == 0)
             {
-                return Mathf.Approximately(v2.x, v2a.x) && Mathf.Approximately(v2.y, v2a.y) ;
+                return Mathf.Approximately(v2.x, v2A.x) && Mathf.Approximately(v2.y, v2A.y) ;
             }
             else
             {
-                float x = Mathf.Abs(v2.x - v2a.x);
-                float y = Mathf.Abs(v2.y - v2a.y);
+                float x = Mathf.Abs(v2.x - v2A.x);
+                float y = Mathf.Abs(v2.y - v2A.y);
                 return x < delta && y < delta ;
             }
         }

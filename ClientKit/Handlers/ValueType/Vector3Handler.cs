@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace Kits.ClientKit.Handlers.ValueType
@@ -12,9 +13,85 @@ namespace Kits.ClientKit.Handlers.ValueType
         Mud,
     }
 
+    public enum VectorMergeOperator
+    {
+        XToX,
+        XToY,
+        XToZ,
+        XToW,
+        YToX,
+        YToY,
+        YToZ,
+        YToW,
+        ZToX,
+        ZToY,
+        ZToZ,
+        ZToW,
+        WToX,
+        WToY,
+        WToZ,
+        WToW,
+        XYToXY,
+        XYToXZ,
+        XYToXW,
+        XYToYX,
+        XYToYZ,
+        XYToYW,
+        XYToZX,
+        XYToZY,
+        XYToZW,
+        XZToXY,
+        XZToXZ,
+        XZToXW,
+        XWToXY,
+        XWToXZ,
+        XWToXW,
+        YXToXY,
+        YXToXZ,
+        YXToYX,
+        YXToYZ,
+        YXToZX,
+        YXToZY,
+        YXToZW,
+        YXToWX,
+        YXToWY,
+        YXToWZ,
+        XYZToXYZ,
+        XYZToXYW,
+        XYZToXZW,
+        XYZToYZW,
+        XYWToXYZ,
+        XYWToXYW,
+        XYWToXZW,
+        XYWToYZW,
+        XZWToXYZ,
+        XZWToXYW,
+        XZWToXZW,
+        XZWToYZW,
+        YZWToXYZ,
+        YZWToXYW,
+        YZWToXZW,
+        YZWToYZW,
+        WZYToXYZ,
+        WZYToXYW,
+        WZYToXZW,
+        WZYToYZW,
+        WZXToXYZ,
+        WZXToXYW,
+        WZXToXZW,
+        WZXToYZW,
+        WYXToXYZ,
+        WYXToXYW,
+        WYXToXZW,
+        WYXToYZW,
+        ZYXToXYZ,
+        ZYXToXYW,
+        ZYXToXZW,
+        ZYXToYZW,
+    }
+    
     public static class Vector3Handler
     {
-
         public static readonly Vector3 Double = new Vector3(2, 2, 2);
 
         public static readonly Vector3 OneHalf = new Vector3(1.5f, 1.5f, 1.5f);
@@ -45,87 +122,356 @@ namespace Kits.ClientKit.Handlers.ValueType
         
         public static Vector3 HoldX(this Vector3 v3)
         {
-            return new Vector3(v3.x, 0, 0);
+            v3.y = 0;
+            v3.z = 0;
+            return v3;
         }
 
         public static Vector3 HoldY(this Vector3 v3)
         {
-            return new Vector3(0, v3.y, 0);
+            v3.x = 0;
+            v3.z = 0;
+            return v3;
         }
         
         public static Vector3 HoldZ(this Vector3 v3)
         {
-            return new Vector3(0, 0,v3.z);
+            v3.y = 0;
+            v3.z = 0;
+            return v3;
         }
         
-        public static Vector3 MergeX(this Vector3 v3,Vector2 v2T)
+        public static Vector3 MergeV2(this Vector3 v3,Vector2 v2T,VectorMergeOperator mergeV2Operator)
         {
-            return new Vector3(v2T.x, v3.y, v3.z);
+            switch (mergeV2Operator)
+            {
+                case VectorMergeOperator.XToX:
+                    v3.x = v2T.x;
+                    break;
+                case VectorMergeOperator.XToY:
+                    v3.y = v2T.x;
+                    break;
+                case VectorMergeOperator.XToZ:
+                    v3.z = v2T.x;
+                    break;
+                case VectorMergeOperator.YToX:
+                    v3.x = v2T.y;
+                    break;
+                case VectorMergeOperator.YToY:
+                    v3.y = v2T.y;
+                    break;
+                case VectorMergeOperator.YToZ:
+                    v3.z = v2T.y;
+                    break;
+                case VectorMergeOperator.XYToXY:
+                    v3.x = v2T.x;
+                    v3.y = v2T.y;
+                    break;
+                case VectorMergeOperator.XYToXZ:
+                    v3.x = v2T.x;
+                    v3.z = v2T.y;
+                    break;
+                case VectorMergeOperator.XYToYX:
+                    v3.y = v2T.x;
+                    v3.x = v2T.y;
+                    break;
+                case VectorMergeOperator.XYToYZ:
+                    v3.y = v2T.x;
+                    v3.z = v2T.y;
+                    break;
+                case VectorMergeOperator.XYToZX:
+                    v3.z = v2T.x;
+                    v3.x = v2T.y;
+                    break;
+                case VectorMergeOperator.XYToZY:
+                    v3.x = v2T.x;
+                    v3.y = v2T.y;
+                    break;
+                case VectorMergeOperator.YXToXY:
+                    v3.x = v2T.y;
+                    v3.y = v2T.x;
+                    break;
+                case VectorMergeOperator.YXToXZ:
+                    v3.x = v2T.y;
+                    v3.z = v2T.x;
+                    break;
+                case VectorMergeOperator.YXToYX:
+                    v3.y = v2T.y;
+                    v3.x = v2T.x;
+                    break;
+                case VectorMergeOperator.YXToYZ:
+                    v3.y = v2T.y;
+                    v3.x = v2T.x;
+                    break;
+                case VectorMergeOperator.YXToZX:
+                    v3.z = v2T.y;
+                    v3.x = v2T.x;
+                    break;
+                case VectorMergeOperator.YXToZY:
+                    v3.z = v2T.y;
+                    v3.y = v2T.x;
+                    break;
+            }
+            return v3;
         }
 
-        public static Vector3 MergeX(this Vector3 v3,Vector3 v3T)
+        public static Vector3 MergeV3(this Vector3 v3, Vector3 v3T, VectorMergeOperator mergeV2Operator)
         {
-            return new Vector3(v3T.x, v3.y, v3.z);
+            switch (mergeV2Operator)
+            {
+                case VectorMergeOperator.XToX:
+                    v3.x = v3T.x;
+                    break;
+                case VectorMergeOperator.XToY:
+                    v3.y = v3T.x;
+                    break;
+                case VectorMergeOperator.XToZ:
+                    v3.z = v3T.x;
+                    break;
+                case VectorMergeOperator.YToX:
+                    v3.x = v3T.y;
+                    break;
+                case VectorMergeOperator.YToY:
+                    v3.y = v3T.y;
+                    break;
+                case VectorMergeOperator.YToZ:
+                    v3.z = v3T.y;
+                    break;
+                case VectorMergeOperator.ZToX:
+                    v3.x = v3T.z;
+                    break;
+                case VectorMergeOperator.ZToY:
+                    v3.y = v3T.z;
+                    break;
+                case VectorMergeOperator.ZToZ:
+                    v3.z = v3T.z;
+                    break;
+                case VectorMergeOperator.XYToXY:
+                    v3.x = v3T.x;
+                    v3.y = v3T.y;
+                    break;
+                case VectorMergeOperator.XYToXZ:
+                    v3.x = v3T.x;
+                    v3.z = v3T.y;
+                    break;
+                case VectorMergeOperator.XYToYX:
+                    v3.y = v3T.x;
+                    v3.z = v3T.y;
+                    break;
+                case VectorMergeOperator.XYToYZ:
+                    v3.y = v3T.x;
+                    v3.z = v3T.y;
+                    break;
+                case VectorMergeOperator.XYToZX:
+                    v3.x = v3T.x;
+                    v3.z = v3T.y;
+                    break;
+                case VectorMergeOperator.XYToZY:
+                    v3.z = v3T.x;
+                    v3.y = v3T.y;
+                    break;
+                case VectorMergeOperator.XZToXY:
+                    v3.x = v3T.x;
+                    v3.y = v3T.z;
+                    break;
+                case VectorMergeOperator.XZToXZ:
+                    v3.x = v3T.x;
+                    v3.z = v3T.z;
+                    break;
+                case VectorMergeOperator.YXToXY:
+                    v3.x = v3T.y;
+                    v3.y = v3T.x;
+                    break;
+                case VectorMergeOperator.YXToXZ:
+                    v3.x = v3T.y;
+                    v3.z = v3T.x;
+                    break;
+                case VectorMergeOperator.YXToYX:
+                    v3.y = v3T.y;
+                    v3.x = v3T.x;
+                    break;
+                case VectorMergeOperator.YXToYZ:
+                    v3.y = v3T.y;
+                    v3.z = v3T.x;
+                    break;
+                case VectorMergeOperator.YXToZX:
+                    v3.z = v3T.y;
+                    v3.x = v3T.x;
+                    break;
+                case VectorMergeOperator.YXToZY:
+                    v3.z = v3T.y;
+                    v3.y = v3T.x;
+                    break;
+                case VectorMergeOperator.ZYXToXYZ:
+                    v3.x = v3T.z;
+                    v3.y = v3T.y;
+                    v3.z = v3T.x;
+                    break;
+            }
+            return v3;
         }
         
-        public static Vector3 MergeX(this Vector3 v3,Vector4 v4T)
+        public static Vector3 MergeV4(this Vector3 v3, Vector4 v4T, VectorMergeOperator mergeV2Operator)
         {
-            return new Vector3(v4T.x, v3.y, v3.z);
-        }
-        
-        public static Vector3 MergeY(this Vector3 v3,Vector2 v2T)
-        {
-            return new Vector3(v3.x, v2T.y, v3.z);
-        }
-        
-        public static Vector3 MergeY(this Vector3 v3,Vector3 v3T)
-        {
-            return new Vector3(v3.x, v3T.y, v3.z);
-        }
-        
-        public static Vector3 MergeY(this Vector3 v3,Vector4 v4T)
-        {
-            return new Vector3(v3.x, v4T.y, v3.z);
-        }
-        
-        public static Vector3 MergeZ(this Vector3 v3,Vector3 v3T)
-        {
-            return new Vector3(v3.x, v3.y, v3T.z);
-        }
-        
-        public static Vector3 MergeZ(this Vector3 v3,Vector4 v4T)
-        {
-            return new Vector3(v3.x, v3.y, v4T.z);
-        }
-        
-        public static Vector3 MergeXY(this Vector3 v3,Vector2 v2T)
-        {
-            return new Vector3(v2T.x, v2T.y, v3.z);
-        }
-        
-        public static Vector3 MergeXY(this Vector3 v3,Vector3 v3T)
-        {
-            return new Vector3(v3T.x, v3T.y, v3.z);
-        }
-        
-        public static Vector3 MergeXY(this Vector3 v3,Vector4 v4T)
-        {
-            return new Vector3(v4T.x, v4T.y, v3.z);
-        }
-        
-        public static Vector3 MergeXZ(this Vector3 v3,Vector3 v3T)
-        {
-            return new Vector3(v3T.x, v3.y, v3T.z);
-        }
-        
-        public static Vector3 MergeXZ(this Vector3 v3,Vector4 v4T)
-        {
-            return new Vector3(v4T.x, v3.y, v4T.z);
-        }
-        
-        public static Vector3 MergeYZ(this Vector3 v3,Vector4 v4T)
-        {
-            return new Vector3(v3.x, v4T.y, v4T.z);
+            switch (mergeV2Operator)
+            {
+                case VectorMergeOperator.XToX:
+                    v3.x = v4T.x;
+                    break;
+                case VectorMergeOperator.XToY:
+                    v3.y = v4T.x;
+                    break;
+                case VectorMergeOperator.XToZ:
+                    v3.z = v4T.x;
+                    break;
+                case VectorMergeOperator.YToX:
+                    v3.x = v4T.y;
+                    break;
+                case VectorMergeOperator.YToY:
+                    v3.y = v4T.y;
+                    break;
+                case VectorMergeOperator.YToZ:
+                    v3.z = v4T.y;
+                    break;
+                case VectorMergeOperator.ZToX:
+                    v3.x = v4T.z;
+                    break;
+                case VectorMergeOperator.ZToY:
+                    v3.y = v4T.z;
+                    break;
+                case VectorMergeOperator.ZToZ:
+                    v3.z = v4T.z;
+                    break;
+                case VectorMergeOperator.XYToXY:
+                    v3.x = v4T.x;
+                    v3.y = v4T.y;
+                    break;
+                case VectorMergeOperator.XYToXZ:
+                    v3.x = v4T.x;
+                    v3.z = v4T.y;
+                    break;
+                case VectorMergeOperator.XYToYX:
+                    v3.y = v4T.x;
+                    v3.z = v4T.y;
+                    break;
+                case VectorMergeOperator.XYToYZ:
+                    v3.y = v4T.x;
+                    v3.z = v4T.y;
+                    break;
+                case VectorMergeOperator.XYToZX:
+                    v3.x = v4T.x;
+                    v3.z = v4T.y;
+                    break;
+                case VectorMergeOperator.XYToZY:
+                    v3.z = v4T.x;
+                    v3.y = v4T.y;
+                    break;
+                case VectorMergeOperator.XZToXY:
+                    v3.x = v4T.x;
+                    v3.y = v4T.z;
+                    break;
+                case VectorMergeOperator.XZToXZ:
+                    v3.x = v4T.x;
+                    v3.z = v4T.z;
+                    break;
+                case VectorMergeOperator.YXToXY:
+                    v3.x = v4T.y;
+                    v3.y = v4T.x;
+                    break;
+                case VectorMergeOperator.YXToXZ:
+                    v3.x = v4T.y;
+                    v3.z = v4T.x;
+                    break;
+                case VectorMergeOperator.YXToYX:
+                    v3.y = v4T.y;
+                    v3.x = v4T.x;
+                    break;
+                case VectorMergeOperator.YXToYZ:
+                    v3.y = v4T.y;
+                    v3.z = v4T.x;
+                    break;
+                case VectorMergeOperator.YXToZX:
+                    v3.z = v4T.y;
+                    v3.x = v4T.x;
+                    break;
+                case VectorMergeOperator.YXToZY:
+                    v3.z = v4T.y;
+                    v3.y = v4T.x;
+                    break;
+                case VectorMergeOperator.ZYXToXYZ:
+                    v3.x = v4T.z;
+                    v3.y = v4T.y;
+                    v3.z = v4T.x;
+                    break;
+                case VectorMergeOperator.WToX:
+                    v3.x = v4T.w;
+                    break;
+                case VectorMergeOperator.WToY:
+                    v3.y = v4T.w;
+                    break;
+                case VectorMergeOperator.WToZ:
+                    v3.z = v4T.w;
+                    break;
+                case VectorMergeOperator.XWToXY:
+                    v3.x = v4T.x;
+                    v3.y = v4T.w;
+                    break;
+                case VectorMergeOperator.XWToXZ:
+                    v3.x = v4T.x;
+                    v3.z = v4T.w;
+                    break;
+                case VectorMergeOperator.XYZToXYZ:
+                    v3.x = v4T.x;
+                    v3.y = v4T.y;
+                    v3.z = v4T.z;
+                    break;
+                case VectorMergeOperator.XYZToXYW:
+                    v3.x = v4T.x;
+                    v3.y = v4T.y;
+                    v3.z = v4T.w;
+                    break;
+                case VectorMergeOperator.XYZToXZW:
+                    v3.x = v4T.x;
+                    v3.y = v4T.z;
+                    v3.z = v4T.w;
+                    break;
+                case VectorMergeOperator.XYZToYZW:
+                    v3.x = v4T.y;
+                    v3.y = v4T.z;
+                    v3.z = v4T.w;
+                    break;
+                case VectorMergeOperator.XYWToXYZ:
+                    v3.x = v4T.x;
+                    v3.y = v4T.y;
+                    v3.z = v4T.w;
+                    break;
+                case VectorMergeOperator.XZWToXYZ:
+                    v3.x = v4T.x;
+                    v3.y = v4T.z;
+                    v3.z = v4T.w;
+                    break;
+                case VectorMergeOperator.YZWToXYZ:
+                    v3.x = v4T.y;
+                    v3.y = v4T.z;
+                    v3.z = v4T.w;
+                    break;
+                case VectorMergeOperator.WZYToXYZ:
+                    v3.x = v4T.w;
+                    v3.y = v4T.z;
+                    v3.z = v4T.y;
+                    break;
+                case VectorMergeOperator.WZXToXYZ:
+                    v3.x = v4T.w;
+                    v3.y = v4T.z;
+                    v3.z = v4T.x;
+                    break;
+                case VectorMergeOperator.WYXToXYZ:
+                    v3.x = v4T.w;
+                    v3.y = v4T.y;
+                    v3.z = v4T.x;
+                    break;
+            }
+            return v3;
         }
         
         public static Vector3 X2Zero(this Vector3 v3)
@@ -148,19 +494,26 @@ namespace Kits.ClientKit.Handlers.ValueType
             switch (vOp)
             {
                 case VectorOperator.Equal:
-                    return new Vector3(x, v3.y, v3.z);
+                    v3.x = x;
+                    return v3;
                 case VectorOperator.Add:
-                    return new Vector3(v3.x + x, v3.y, v3.z);
+                    v3.x += x;
+                    return v3;
                 case VectorOperator.Sub:
-                    return new Vector3(v3.x - x, v3.y, v3.z);
+                    v3.x -= x;
+                    return v3;
                 case VectorOperator.Multi:
-                    return new Vector3(v3.x * x, v3.y, v3.z);
+                    v3.x *= x;
+                    return v3;
                 case VectorOperator.Divide:
-                    return new Vector3(v3.x / x, v3.y, v3.z);
+                    v3.x /= x;
+                    return v3;
                 case VectorOperator.Mud:
-                    return new Vector3(v3.x % x, v3.y, v3.z);
+                    v3.x %= x;
+                    return v3;
                 default:
-                    return new Vector3(x, v3.y, v3.z);
+                    v3.x = x;
+                    return v3;
             }
         }
 
@@ -169,19 +522,26 @@ namespace Kits.ClientKit.Handlers.ValueType
             switch (vOp)
             {
                 case VectorOperator.Equal:
-                    return new Vector3(v3.x, y, v3.z);
+                    v3.y = y;
+                    return v3;
                 case VectorOperator.Add:
-                    return new Vector3(v3.x, v3.y + y, v3.z);
+                    v3.y += y;
+                    return v3;
                 case VectorOperator.Sub:
-                    return new Vector3(v3.x, v3.y - y, v3.z);
+                    v3.y -= y;
+                    return v3;
                 case VectorOperator.Multi:
-                    return new Vector3(v3.x, v3.y * y, v3.z);
+                    v3.y *= y;
+                    return v3;
                 case VectorOperator.Divide:
-                    return new Vector3(v3.x, v3.y / y, v3.z);
+                    v3.y /= y;
+                    return v3;
                 case VectorOperator.Mud:
-                    return new Vector3(v3.x, v3.y % y, v3.z);
+                    v3.y %= y;
+                    return v3;
                 default:
-                    return new Vector3(v3.x, y, v3.z);
+                    v3.y = y;
+                    return v3;
             }
         }
 
@@ -190,41 +550,60 @@ namespace Kits.ClientKit.Handlers.ValueType
             switch (vOp)
             {
                 case VectorOperator.Equal:
-                    return new Vector3(v3.x, v3.y, z);
+                    v3.z = z;
+                    return v3;
                 case VectorOperator.Add:
-                    return new Vector3(v3.x, v3.y, v3.z + z);
+                    v3.z += z;
+                    return v3;
                 case VectorOperator.Sub:
-                    return new Vector3(v3.x, v3.y, v3.z - z);
+                    v3.z -= z;
+                    return v3;
                 case VectorOperator.Multi:
-                    return new Vector3(v3.x, v3.y, v3.z * z);
+                    v3.z *= z;
+                    return v3;
                 case VectorOperator.Divide:
-                    return new Vector3(v3.x, v3.y, v3.z / z);
+                    v3.z /= z;
+                    return v3;
                 case VectorOperator.Mud:
-                    return new Vector3(v3.x, v3.y, v3.z % z);
+                    v3.z %= z;
+                    return v3;
                 default:
-                    return new Vector3(v3.x, v3.y, z);
+                    v3.z = z;
+                    return v3;
             }
         }
 
 
         public static Vector3 Divide(this Vector3 v3, Vector3 v3d)
         {
-            return new Vector3(v3.x / v3d.x, v3.y / v3d.y, v3.z / v3d.z);
+            v3.x /= v3d.x;
+            v3.y /= v3d.y;
+            v3.z /= v3d.z;
+            return v3;
         }
 
         public static Vector3 Divide(this Vector3 v3, Vector2 v2d)
         {
-            return new Vector3(v3.x / v2d.x, v3.y / v2d.y, 0);
+            v3.x /= v2d.x;
+            v3.y /= v2d.y;
+            v3.z = 0;
+            return v3;
         }
 
         public static Vector3 Multi(this Vector3 v3, Vector3 v3M)
         {
-            return new Vector3(v3.x * v3M.x, v3.y * v3M.y, v3.z * v3M.z);
+            v3.x *= v3M.x;
+            v3.y *= v3M.y;
+            v3.z *= v3M.z;
+            return v3;
         }
 
         public static Vector3 Multi(this Vector3 v3, Vector2 v2M)
         {
-            return new Vector3(v3.x * v2M.x, v3.y * v2M.y, 0);
+            v3.x *= v2M.x;
+            v3.y *= v2M.y;
+            v3.z = 0;
+            return v3;
         }
 
         public static Vector2 XY(this Vector3 v)
@@ -237,7 +616,7 @@ namespace Kits.ClientKit.Handlers.ValueType
             return new Vector2(v.x, v.z);
         }
 
-        public static Vector2 Yx(this Vector3 v)
+        public static Vector2 YX(this Vector3 v)
         {
             return new Vector2(v.y, v.x);
         }
@@ -247,12 +626,12 @@ namespace Kits.ClientKit.Handlers.ValueType
             return new Vector2(v.y, v.z);
         }
 
-        public static Vector2 Zx(this Vector3 v)
+        public static Vector2 ZX(this Vector3 v)
         {
             return new Vector2(v.z, v.x);
         }
 
-        public static Vector2 Zy(this Vector3 v)
+        public static Vector2 ZY(this Vector3 v)
         {
             return new Vector2(v.z, v.y);
         }

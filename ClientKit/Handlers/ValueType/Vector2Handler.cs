@@ -35,111 +35,141 @@ namespace Kits.ClientKit.Handlers.ValueType
             return v2;
         }
 
-        public static Vector2 MergeV2XToX(this Vector2 v2,Vector2 v2T)
+        public static Vector2 MergeV2(this Vector2 v2,Vector2 v2T,VectorMergeOperator mergeV2Operator)
         {
-            v2.x = v2T.x;
+            switch (mergeV2Operator)
+            {
+                case VectorMergeOperator.XToX:
+                    v2.x = v2T.x;
+                    break;
+                case VectorMergeOperator.XToY:
+                    v2.y = v2T.x;
+                    break;
+                case VectorMergeOperator.YToX:
+                    v2.x = v2T.y;
+                    break;
+                case VectorMergeOperator.YToY:
+                    v2.y = v2T.y;
+                    break;
+                case VectorMergeOperator.XYToXY:
+                    v2.x = v2T.x;
+                    v2.y = v2T.y;
+                    break;
+                case VectorMergeOperator.XYToYX:
+                    v2.y = v2T.x;
+                    v2.x = v2T.y;
+                    break;
+                case VectorMergeOperator.XYToZY:
+                    v2.x = v2T.x;
+                    v2.y = v2T.y;
+                    break;
+                case VectorMergeOperator.YXToXY:
+                    v2.x = v2T.y;
+                    v2.y = v2T.x;
+                    break;
+                case VectorMergeOperator.YXToYX:
+                    v2.y = v2T.y;
+                    v2.x = v2T.x;
+                    break;
+                case VectorMergeOperator.YXToYZ:
+                    v2.y = v2T.y;
+                    v2.x = v2T.x;
+                    break;
+            }
+            return v2;
+        }
+
+        public static Vector2 MergeV3(this Vector2 v2, Vector3 v3T, VectorMergeOperator mergeV2Operator)
+        {
+            switch (mergeV2Operator)
+            {
+                case VectorMergeOperator.XToX:
+                    v2.x = v3T.x;
+                    break;
+                case VectorMergeOperator.XToY:
+                    v2.y = v3T.x;
+                    break;
+                case VectorMergeOperator.YToX:
+                    v2.x = v3T.y;
+                    break;
+                case VectorMergeOperator.YToY:
+                    v2.y = v3T.y;
+                    break;
+                case VectorMergeOperator.ZToX:
+                    v2.x = v3T.z;
+                    break;
+                case VectorMergeOperator.ZToY:
+                    v2.y = v3T.z;
+                    break;
+                case VectorMergeOperator.XYToXY:
+                    v2.x = v3T.x;
+                    v2.y = v3T.y;
+                    break;
+                case VectorMergeOperator.XZToXY:
+                    v2.x = v3T.x;
+                    v2.y = v3T.z;
+                    break;
+                case VectorMergeOperator.YXToXY:
+                    v2.x = v3T.y;
+                    v2.y = v3T.x;
+                    break;
+                case VectorMergeOperator.YXToYX:
+                    v2.y = v3T.y;
+                    v2.x = v3T.x;
+                    break;
+            }
             return v2;
         }
         
-        public static Vector2 MergeV2YToX(this Vector2 v2,Vector2 v2T)
+        public static Vector2 MergeV4(this Vector2 v2, Vector4 v4T, VectorMergeOperator mergeV2Operator)
         {
-            v2.x = v2T.y;
-            return v2;
-        }
-        
-        public static Vector2 MergeV3XToX(this Vector2 v2,Vector3 v3T)
-        {
-            v2.x = v3T.x;
-            return v2;
-        }
-        
-        public static Vector2 MergeV3YToX(this Vector2 v2,Vector3 v3T)
-        {
-            v2.x = v3T.y;
-            return v2;
-        }
-        
-        public static Vector2 MergeV3ZToX(this Vector2 v2,Vector3 v3T)
-        {
-            v2.x = v3T.z;
-            return v2;
-        }
-        
-        public static Vector2 MergeV4XToX(this Vector2 v2,Vector4 v4T)
-        {
-            v2.x = v4T.x;
-            return v2;
-        }
-        
-        public static Vector2 MergeV4YToX(this Vector2 v2,Vector4 v4T)
-        {
-            v2.x = v4T.y;
-            return v2;
-        }
-        
-        public static Vector2 MergeV4ZToX(this Vector2 v2,Vector4 v4T)
-        {
-            v2.x = v4T.z;
-            return v2;
-        }
-        
-        public static Vector2 MergeV4WToX(this Vector2 v2,Vector4 v4T)
-        {
-            v2.x = v4T.w;
-            return v2;
-        }
-        
-        public static Vector2 MergeV2XToY(this Vector2 v2,Vector2 v2T)
-        {
-            v2.y = v2T.x;
-            return v2;
-        }
-        
-        public static Vector2 MergeV2YToY(this Vector2 v2,Vector2 v2T)
-        {
-            v2.y = v2T.y;
-            return v2;
-        }
-        
-        public static Vector2 MergeV3XToY(this Vector2 v2,Vector3 v3T)
-        {
-            v2.y = v3T.x;
-            return v2;
-        }
-        
-        public static Vector2 MergeV3YToY(this Vector2 v2,Vector3 v3T)
-        {
-            v2.y = v3T.y;
-            return v2;
-        }
-        
-        public static Vector2 MergeV3ZToY(this Vector2 v2,Vector3 v3T)
-        {
-            v2.y = v3T.z;
-            return v2;
-        }
-        
-        public static Vector2 MergeV4XToY(this Vector2 v2,Vector4 v4T)
-        {
-            v2.y = v4T.x;
-            return v2;
-        }
-        
-        public static Vector2 MergeV4YToY(this Vector2 v2,Vector4 v4T)
-        {
-            v2.y = v4T.y;
-            return v2;
-        }
-        
-        public static Vector2 MergeV4ZToY(this Vector2 v2,Vector4 v4T)
-        {
-            v2.y = v4T.z;
-            return v2;
-        }
-        
-        public static Vector2 MergeV4WToY(this Vector2 v2,Vector4 v4T)
-        {
-            v2.y = v4T.w;
+            switch (mergeV2Operator)
+            {
+                case VectorMergeOperator.XToX:
+                    v2.x = v4T.x;
+                    break;
+                case VectorMergeOperator.XToY:
+                    v2.y = v4T.x;
+                    break;
+                case VectorMergeOperator.YToX:
+                    v2.x = v4T.y;
+                    break;
+                case VectorMergeOperator.YToY:
+                    v2.y = v4T.y;
+                    break;
+                case VectorMergeOperator.ZToX:
+                    v2.x = v4T.z;
+                    break;
+                case VectorMergeOperator.ZToY:
+                    v2.y = v4T.z;
+                    break;
+                case VectorMergeOperator.XYToXY:
+                    v2.x = v4T.x;
+                    v2.y = v4T.y;
+                    break;
+                case VectorMergeOperator.XZToXY:
+                    v2.x = v4T.x;
+                    v2.y = v4T.z;
+                    break;
+                case VectorMergeOperator.YXToXY:
+                    v2.x = v4T.y;
+                    v2.y = v4T.x;
+                    break;
+                case VectorMergeOperator.YXToYX:
+                    v2.y = v4T.y;
+                    v2.x = v4T.x;
+                    break;
+                case VectorMergeOperator.WToX:
+                    v2.x = v4T.w;
+                    break;
+                case VectorMergeOperator.WToY:
+                    v2.y = v4T.w;
+                    break;
+                case VectorMergeOperator.XWToXY:
+                    v2.x = v4T.x;
+                    v2.y = v4T.w;
+                    break;
+            }
             return v2;
         }
 

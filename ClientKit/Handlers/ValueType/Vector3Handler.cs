@@ -89,7 +89,7 @@ namespace Kits.ClientKit.Handlers.ValueType
         ZYXToXZW,
         ZYXToYZW,
     }
-    
+
     public static class Vector3Handler
     {
         public static readonly Vector3 Double = new Vector3(2, 2, 2);
@@ -105,43 +105,58 @@ namespace Kits.ClientKit.Handlers.ValueType
             return new Vector3(f, f, f);
         }
 
-        public static Vector3 XToV3(this float f)
+        public static Vector3 XToV3(this float f, float defaultValue = 0)
         {
-            return new Vector3(f, 0, 0);
+            return new Vector3(f, defaultValue, defaultValue);
         }
-        
-        public static Vector3 YToV3(this float f)
+
+        public static Vector3 YToV3(this float f, float defaultValue = 0)
         {
-            return new Vector3(0, f, 0);
+            return new Vector3(defaultValue, f, defaultValue);
         }
-        
-        public static Vector3 ZToV3(this float f)
+
+        public static Vector3 ZToV3(this float f, float defaultValue = 0)
         {
-            return new Vector3(0, 0, f);
+            return new Vector3(defaultValue, defaultValue, f);
         }
-        
-        public static Vector3 HoldX(this Vector3 v3)
+
+        public static Vector3 XYToV3(this float f, float defaultValue = 0)
         {
-            v3.y = 0;
-            v3.z = 0;
+            return new Vector3(f, f, defaultValue);
+        }
+
+        public static Vector3 YZToV3(this float f, float defaultValue = 0)
+        {
+            return new Vector3(defaultValue, f, f);
+        }
+
+        public static Vector3 XZToV3(this float f, float defaultValue = 0)
+        {
+            return new Vector3(f, defaultValue, f);
+        }
+
+        public static Vector3 HoldX(this Vector3 v3, float defaultValue = 0)
+        {
+            v3.y = defaultValue;
+            v3.z = defaultValue;
             return v3;
         }
 
-        public static Vector3 HoldY(this Vector3 v3)
+        public static Vector3 HoldY(this Vector3 v3, float defaultValue = 0)
         {
-            v3.x = 0;
-            v3.z = 0;
+            v3.x = defaultValue;
+            v3.z = defaultValue;
             return v3;
         }
-        
-        public static Vector3 HoldZ(this Vector3 v3)
+
+        public static Vector3 HoldZ(this Vector3 v3, float defaultValue = 0)
         {
-            v3.y = 0;
-            v3.z = 0;
+            v3.y = defaultValue;
+            v3.z = defaultValue;
             return v3;
         }
-        
-        public static Vector3 MergeV2(this Vector3 v3,Vector2 v2T,VectorMergeOperator mergeV2Operator)
+
+        public static Vector3 MergeV2(this Vector3 v3, Vector2 v2T, VectorMergeOperator mergeV2Operator)
         {
             switch (mergeV2Operator)
             {
@@ -212,6 +227,7 @@ namespace Kits.ClientKit.Handlers.ValueType
                     v3.y = v2T.x;
                     break;
             }
+
             return v3;
         }
 
@@ -308,9 +324,10 @@ namespace Kits.ClientKit.Handlers.ValueType
                     v3.z = v3T.x;
                     break;
             }
+
             return v3;
         }
-        
+
         public static Vector3 MergeV4(this Vector3 v3, Vector4 v4T, VectorMergeOperator mergeV2Operator)
         {
             switch (mergeV2Operator)
@@ -471,9 +488,10 @@ namespace Kits.ClientKit.Handlers.ValueType
                     v3.z = v4T.x;
                     break;
             }
+
             return v3;
         }
-        
+
         public static Vector3 X2Zero(this Vector3 v3)
         {
             return v3.ChangeX(0);
@@ -636,24 +654,24 @@ namespace Kits.ClientKit.Handlers.ValueType
             return new Vector2(v.z, v.y);
         }
 
-        public static Vector4 V3ToV4EmptyX(Vector3 v)
+        public static Vector4 V3ToV4SetX(Vector3 v, float defaultValue = 0)
         {
-            return new Vector4(0.0f, v.x, v.y, v.z);
+            return new Vector4(defaultValue, v.x, v.y, v.z);
         }
 
-        public static Vector3 V3ToV4EmptyY(Vector3 v)
+        public static Vector3 V3ToV4SetY(Vector3 v, float defaultValue = 0)
         {
-            return new Vector4(v.x, 0.0f, v.y, v.z);
+            return new Vector4(v.x, defaultValue, v.y, v.z);
         }
 
-        public static Vector4 V3ToV4EmptyZ(Vector3 v)
+        public static Vector4 V3ToV4SetZ(Vector3 v, float defaultValue = 0)
         {
-            return new Vector4(v.x, v.y, 0.0f, v.z);
+            return new Vector4(v.x, v.y, defaultValue, v.z);
         }
 
-        public static Vector4 V3ToV4EmptyW(Vector3 v)
+        public static Vector4 V3ToV4SetW(Vector3 v, float defaultValue = 0)
         {
-            return new Vector4(v.x, v.y, v.z, 0.0f);
+            return new Vector4(v.x, v.y, v.z, defaultValue);
         }
 
         public static bool Approximately(this Vector3 v3, Vector3 v3A, float delta = 0)

@@ -13,29 +13,29 @@ namespace Kits.ClientKit.Handlers.ValueType
             return new Vector2(f, f);
         }
 
-        public static Vector2 XToV2(float f)
+        public static Vector2 XToV2(float f, float defaultValue = 0)
         {
-            return new Vector2(f, 0);
+            return new Vector2(f, defaultValue);
         }
-        
-        public static Vector2 YToV2(float f)
+
+        public static Vector2 YToV2(float f, float defaultValue = 0)
         {
-            return new Vector2(0, f);
+            return new Vector2(defaultValue, f);
         }
-        
-        public static Vector2 HoldX(this Vector2 v2)
+
+        public static Vector2 HoldX(this Vector2 v2, float defaultValue = 0)
         {
-            v2.y = 0;
+            v2.y = defaultValue;
             return v2;
         }
 
-        public static Vector2 HoldY(this Vector2 v2)
+        public static Vector2 HoldY(this Vector2 v2, float defaultValue = 0)
         {
-            v2.x = 0;
+            v2.x = defaultValue;
             return v2;
         }
 
-        public static Vector2 MergeV2(this Vector2 v2,Vector2 v2T,VectorMergeOperator mergeV2Operator)
+        public static Vector2 MergeV2(this Vector2 v2, Vector2 v2T, VectorMergeOperator mergeV2Operator)
         {
             switch (mergeV2Operator)
             {
@@ -76,6 +76,7 @@ namespace Kits.ClientKit.Handlers.ValueType
                     v2.x = v2T.x;
                     break;
             }
+
             return v2;
         }
 
@@ -118,9 +119,10 @@ namespace Kits.ClientKit.Handlers.ValueType
                     v2.x = v3T.x;
                     break;
             }
+
             return v2;
         }
-        
+
         public static Vector2 MergeV4(this Vector2 v2, Vector4 v4T, VectorMergeOperator mergeV2Operator)
         {
             switch (mergeV2Operator)
@@ -170,6 +172,7 @@ namespace Kits.ClientKit.Handlers.ValueType
                     v2.y = v4T.w;
                     break;
             }
+
             return v2;
         }
 
@@ -183,12 +186,12 @@ namespace Kits.ClientKit.Handlers.ValueType
             return v2.ChangeX(0);
         }
 
-        public static float Cross(this Vector2 a,Vector2 b)
+        public static float Cross(this Vector2 a, Vector2 b)
         {
             return (a.x * b.y - b.x * a.y);
         }
-        
-        public static Vector2 ChangeX(this Vector2 v2, float x,VectorOperator vOp = VectorOperator.Equal)
+
+        public static Vector2 ChangeX(this Vector2 v2, float x, VectorOperator vOp = VectorOperator.Equal)
         {
             switch (vOp)
             {
@@ -216,7 +219,7 @@ namespace Kits.ClientKit.Handlers.ValueType
             }
         }
 
-        public static Vector2 ChangeY(this Vector2 v2, float y,VectorOperator vOp = VectorOperator.Equal)
+        public static Vector2 ChangeY(this Vector2 v2, float y, VectorOperator vOp = VectorOperator.Equal)
         {
             switch (vOp)
             {
@@ -251,48 +254,48 @@ namespace Kits.ClientKit.Handlers.ValueType
             v2.y = value;
             return v2;
         }
-        
-        public static Vector3 V2ToV3EmptyX(this Vector2 v2)
+
+        public static Vector3 V2ToV3SetX(this Vector2 v2, float defaultValue = 0)
         {
-            return new Vector3(0, v2.x, v2.y);
+            return new Vector3(defaultValue, v2.x, v2.y);
         }
-        
-        public static Vector3 V2ToV3EmptyY(this Vector2 v2)
+
+        public static Vector3 V2ToV3EmptyY(this Vector2 v2, float defaultValue = 0)
         {
-            return new Vector3(v2.x, 0, v2.y);
+            return new Vector3(v2.x, defaultValue, v2.y);
         }
-        
-        public static Vector3 V2ToV3EmptyZ(this Vector2 v2)
+
+        public static Vector3 V2ToV3SetZ(this Vector2 v2, float defaultValue = 0)
         {
-            return new Vector3(v2.x, v2.y, 0);
+            return new Vector3(v2.x, v2.y, defaultValue);
         }
-        
-        public static Vector4 V2ToV4EmptyXY(this Vector2 v2)
+
+        public static Vector4 V2ToV4SetXY(this Vector2 v2, float defaultValue = 0)
         {
-            return new Vector4(0, 0, v2.x, v2.y);
+            return new Vector4(defaultValue, defaultValue, v2.x, v2.y);
         }
-        
-        public static Vector4 V2ToV4EmptyXZ(this Vector2 v2)
+
+        public static Vector4 V2ToV4SetXZ(this Vector2 v2, float defaultValue = 0)
         {
-            return new Vector4(v2.x, 0, 0, v2.y);
+            return new Vector4(v2.x, defaultValue, defaultValue, v2.y);
         }
-        
-        public static Vector4 V2ToV4EmptyXW(this Vector2 v2)
+
+        public static Vector4 V2ToV4SetXW(this Vector2 v2, float defaultValue = 0)
         {
-            return new Vector4(0, v2.x, v2.y, 0);
+            return new Vector4(defaultValue, v2.x, v2.y, defaultValue);
         }
-        
-        public static bool Approximately(this Vector2 v2,Vector2 v2A,float delta = 0)
+
+        public static bool Approximately(this Vector2 v2, Vector2 v2A, float delta = 0)
         {
             if (delta == 0)
             {
-                return Mathf.Approximately(v2.x, v2A.x) && Mathf.Approximately(v2.y, v2A.y) ;
+                return Mathf.Approximately(v2.x, v2A.x) && Mathf.Approximately(v2.y, v2A.y);
             }
             else
             {
                 float x = Mathf.Abs(v2.x - v2A.x);
                 float y = Mathf.Abs(v2.y - v2A.y);
-                return x < delta && y < delta ;
+                return x < delta && y < delta;
             }
         }
     }

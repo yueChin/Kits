@@ -18,55 +18,90 @@ namespace Kits.ClientKit.Handlers.ValueType
             return new Vector4(f, f, f, f);
         }
 
-        public static Vector4 X2V4(this float f)
+        public static Vector4 X2V4(this float f, float defaultValue = 0)
         {
-            return new Vector4(f, 0, 0, 0);
+            return new Vector4(f, defaultValue, defaultValue, defaultValue);
         }
 
-        public static Vector4 Y2V4(this float f)
+        public static Vector4 Y2V4(this float f, float defaultValue = 0)
         {
-            return new Vector4(0, f, 0, 0);
+            return new Vector4(defaultValue, f, defaultValue, defaultValue);
         }
 
-        public static Vector4 Z2V4(this float f)
+        public static Vector4 Z2V4(this float f, float defaultValue = 0)
         {
-            return new Vector4(0, 0, f, 0);
+            return new Vector4(defaultValue, defaultValue, f, defaultValue);
         }
 
-        public static Vector4 W2V4(this float f)
+        public static Vector4 W2V4(this float f, float defaultValue = 0)
         {
-            return new Vector4(0, 0, 0, f);
+            return new Vector4(defaultValue, defaultValue, defaultValue, f);
         }
 
-        public static Vector4 HoldX(this Vector4 v4)
+        public static Vector4 XYToV4(this float f, float defaultValue = 0)
         {
-            v4.y = 0;
-            v4.z = 0;
-            v4.w = 0;
+            return new Vector4(f, f, defaultValue, defaultValue);
+        }
+
+        public static Vector4 YZToV4(this float f, float defaultValue = 0)
+        {
+            return new Vector4(defaultValue, f, f, defaultValue);
+        }
+
+        public static Vector4 XZToV4(this float f, float defaultValue = 0)
+        {
+            return new Vector4(f, defaultValue, f, defaultValue);
+        }
+
+        public static Vector4 XYZToV4(this float f, float defaultValue = 0)
+        {
+            return new Vector4(f, f, f, defaultValue);
+        }
+
+        public static Vector4 XYWToV4(this float f, float defaultValue = 0)
+        {
+            return new Vector4(f, f, defaultValue, f);
+        }
+
+        public static Vector4 XZWToV4(this float f, float defaultValue = 0)
+        {
+            return new Vector4(f, defaultValue, f, f);
+        }
+
+        public static Vector4 YZWToV4(this float f, float defaultValue = 0)
+        {
+            return new Vector4(defaultValue, f, f, f);
+        }
+
+        public static Vector4 HoldX(this Vector4 v4, float defaultValue = 0)
+        {
+            v4.y = defaultValue;
+            v4.z = defaultValue;
+            v4.w = defaultValue;
             return v4;
         }
 
-        public static Vector4 HoldY(this Vector4 v4)
+        public static Vector4 HoldY(this Vector4 v4, float defaultValue = 0)
         {
-            v4.x = 0;
-            v4.z = 0;
-            v4.w = 0;
+            v4.x = defaultValue;
+            v4.z = defaultValue;
+            v4.w = defaultValue;
             return v4;
         }
 
-        public static Vector4 HoldZ(this Vector4 v4)
+        public static Vector4 HoldZ(this Vector4 v4, float defaultValue = 0)
         {
-            v4.x = 0;
-            v4.y = 0;
-            v4.w = 0;
+            v4.x = defaultValue;
+            v4.y = defaultValue;
+            v4.w = defaultValue;
             return v4;
         }
 
-        public static Vector4 HoldW(this Vector4 v4)
+        public static Vector4 HoldW(this Vector4 v4, float defaultValue = 0)
         {
-            v4.x = 0;
-            v4.y = 0;
-            v4.z = 0;
+            v4.x = defaultValue;
+            v4.y = defaultValue;
+            v4.z = defaultValue;
             return v4;
         }
 
@@ -90,7 +125,7 @@ namespace Kits.ClientKit.Handlers.ValueType
             return v4.ChangeW(0);
         }
 
-        public static Vector4 MergeV2(this Vector4 v4,Vector2 v2T,VectorMergeOperator mergeV2Operator)
+        public static Vector4 MergeV2(this Vector4 v4, Vector2 v2T, VectorMergeOperator mergeV2Operator)
         {
             switch (mergeV2Operator)
             {
@@ -161,6 +196,7 @@ namespace Kits.ClientKit.Handlers.ValueType
                     v4.y = v2T.x;
                     break;
             }
+
             return v4;
         }
 
@@ -257,9 +293,10 @@ namespace Kits.ClientKit.Handlers.ValueType
                     v4.z = v3T.x;
                     break;
             }
+
             return v4;
         }
-        
+
         public static Vector4 MergeV4(this Vector4 v4, Vector4 v4T, VectorMergeOperator mergeV2Operator)
         {
             switch (mergeV2Operator)
@@ -573,9 +610,10 @@ namespace Kits.ClientKit.Handlers.ValueType
                     v4.w = v4T.x;
                     break;
             }
+
             return v4;
         }
-        
+
         public static Vector4 ChangeX(this Vector4 v4, float x, VectorOperator vOp = VectorOperator.Equal)
         {
             switch (vOp)
